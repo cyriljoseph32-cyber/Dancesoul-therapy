@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import RiseMark, { Wordmark } from './RiseMark'
-import { nav, wa } from '@/lib/site'
+import { nav } from '@/lib/site'
 
 export default function Header() {
   return (
@@ -16,9 +16,9 @@ export default function Header() {
           </Link>
         ))}
       </nav>
-      <a href={wa()} className="btn btn-sm" target="_blank" rel="noreferrer">
+      <Link href="/booking" className="btn btn-sm">
         Book
-      </a>
+      </Link>
     </header>
   )
 }

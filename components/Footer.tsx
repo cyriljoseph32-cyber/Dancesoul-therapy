@@ -20,7 +20,7 @@ export default function Footer() {
         <a href={INSTAGRAM} target="_blank" rel="noreferrer">
           Instagram
         </a>
-        <Link href="/">Book</Link>
+        <Link href="/booking">Book</Link>
       </div>
       <p className="signature">Awaken · Express · Heal</p>
     </footer>

@@ -9,11 +9,17 @@ export const wa = (msg = "Hi DanceSoulTherapy, I'd like to book a session 🙏")
 
 export const nav = [
   { label: 'What is DST', href: '/what-is' },
-  { label: 'Experiences', href: '/#offers' },
-  { label: 'Retreats', href: '/#hotels' },
+  { label: 'Sessions', href: '/group' },
+  { label: 'Private', href: '/private' },
+  { label: 'Retreats', href: '/retreats' },
   { label: 'About', href: '/about' },
-  { label: 'FAQ', href: '/#faq' },
+  { label: 'Journal', href: '/blog' },
+  { label: 'Contact', href: '/contact' },
 ]
+
+// Cal.com booking link — set once Hannah claims the handle (e.g. 'dancesoultherapy')
+// Until set, the booking page offers the WhatsApp flow.
+export const CAL_LINK = ''
 
 export const benefits: [string, string][] = [
   ['Release', 'what the body holds.'],
@@ -91,4 +97,14 @@ export const faqs: [string, string][] = [
   ],
   ['Are men welcome?', 'Absolutely. All bodies, all genders, all ages.'],
   ['How do I book?', 'Online via WhatsApp, in seconds. Pay on-site or online.'],
+]
+
+export const schedule: [string, string, string][] = [
+  // [day, time, location] — placeholder grid, confirm with Hannah
+  ['Monday', '17:30', 'Lamai · Koh 33 Stadium'],
+  ['Tuesday', '17:30', 'Chaweng · Chor Ratchawat Gym'],
+  ['Wednesday', '17:30', 'Lamai · Koh 33 Stadium'],
+  ['Thursday', '17:30', 'Chaweng · Chor Ratchawat Gym'],
+  ['Friday', '17:30', 'Lamai · Koh 33 Stadium'],
+  ['Saturday', '10:00 (kids) · 17:00', 'Chaweng · Chor Ratchawat Gym'],
 ]
