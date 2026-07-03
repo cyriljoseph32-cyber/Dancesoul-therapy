@@ -1,297 +1,210 @@
-# DanceSoulTherapy® — Brand Blueprint
+# DanceSoulTherapy® — Brand & Website Blueprint
 
-**Movement therapy, elevated to a global premium wellness brand.**
-Strategy document — no code. Awaiting approval before implementation (per Step 3).
-
-> Scope note: no reference visuals were provided this turn. Visual direction below is built from your stated emotional intent; lock it against your references before production.
+Phase 1 of 2. Strategy only — **no code until approval.** Single strong recommendation per decision.
 
 ---
 
-## 0. Where we are
+## 1. Executive Brand Direction
 
-A functioning bilingual-ready MVP site already exists (React/Vite, on `main`, WhatsApp booking, real contacts). Treat it as **Phase 0 proof-of-concept** — it validates demand cheaply. This Blueprint defines the *premium target* the ecosystem migrates to. We do not scale the MVP; we replace it deliberately (see §14).
+**Positioning.** The premium global reference for **movement therapy** — releasing emotion through guided movement and breath. The embodied counterpart to meditation, delivered with the restraint of a world-class sanctuary.
 
----
+**Essence.** *Come back to your body.*
 
-## 1. Strategic analysis — challenges before we build
+**Why it wins.** Meditation owns stillness; DanceSoulTherapy owns embodied release — an unclaimed category. The moat is a documented, trademarked practice (**The DanceSoul Method™**), not the website; it is what makes retreats, certification, and franchise possible. Priority one.
 
-A world-class agency earns its fee by disagreeing well. Seven issues to resolve now, because each one gets 10× more expensive after launch.
-
-**1. The moat is a Method, not a website.** To become "the world reference in movement therapy," the asset that matters is proprietary, trademarked IP: **The DanceSoul Method™** — a named, documented framework (defined phases, principles, sequences, facilitation protocol). Without it, there is nothing to certify, franchise, or teach in an academy — the whole ecosystem rests on it. *This is the single highest-priority decision.* Everything else (site, app, cert) is distribution for the Method.
-
-**2. "Therapy" is an asset and a liability.** It wins search intent and differentiates from "dance class." But in many markets it implies clinical/medical claims (regulated, insurable, litigable). Recommendation: keep the name, but **govern the language** — position as *movement & emotional-wellbeing practice*, never treatment/cure. Add a wellness disclaimer. Consider "Method" as the outward-facing word beside "Therapy." Decision needed.
-
-**3. Tagline "Heal" carries the same risk and is generic.** Keep *Awaken • Express • Heal* if you're attached, but I'd pressure-test alternatives that are ownable and claim-safe (§3).
-
-**4. The name is long — you need a mark.** "DanceSoulTherapy" cannot live on a favicon, app icon, embroidery, or a signet. A **monogram/symbol is mandatory**, not optional. The brand system must be *symbol-first* (like Aesop's wordmark discipline or Aman's restraint), with the full name as endorsement.
-
-**5. Brand architecture.** Recommend a **master-brand with a method endorsement**: `DanceSoul` (master) → `The DanceSoul Method™` (practice) → sub-lines (Retreats, Academy, Certification, Corporate). This lets "DanceSoul" travel globally while "Therapy/Method" stays a descriptor you control.
-
-**6. Founder-dependency vs. franchise.** Today the brand = the founder. A franchise/certification model requires the *Method* to deliver the result, not one person. Separate them now: document the Method so a certified facilitator reproduces the experience.
-
-**7. Sequence, don't stack.** The brief lists website + app + academy + certification + membership + merch + franchise. Building them in parallel is the classic way premium brands dilute and die. **Phase it** (§14). Prove demand → codify Method → certify → then platform/app/franchise.
+**Language governance.** "Therapy/Heal" drive search intent but imply medical claims in many markets. Keep the words; frame everything as *emotional-wellbeing practice*, never treatment/cure; add a wellness disclaimer. Strong decision: keep name, govern claims.
 
 ---
 
-## 2. Brand foundation
+## 2. Creative Direction From Inspiration
 
-**Purpose.** Give people a way back into their bodies — and out of what they carry — through movement.
+*Note: reference images were described, not received; direction is built from the stated emotional universe and locks against your visuals before production.*
 
-**Positioning statement.** *For wellness-driven adults who feel disconnected or depleted, DanceSoul is a premium movement-therapy practice that releases emotion through guided movement and breath — the embodied counterpart to meditation, delivered with the restraint and beauty of a world-class sanctuary.*
+**Emotional universe:** sacred tropical sanctuary at golden sunrise — dark jungle depth pierced by warm light. Powerful, calm, modern, sophisticated. Never mystical, religious, or spa-generic.
 
-**Category.** We are not creating "another wellness offer." We are defining **movement therapy** as a category and owning it — the way a few brands own their verb.
+**Altitude:** Aman × Aesop × Six Senses — editorial confidence, natural luxury, space as the luxury.
 
-**One-line essence.** Meditation stills the mind. DanceSoul moves the body to free it.
+**Translate to:** deep emerald/navy grounds, warm-gold light as jewelry, real motion in natural light, subtle particle/haze depth, wide margins.
+**Ban list:** lotus, mandalas, chakras, script fonts, watercolor blobs, rainbow gradients, over-feminine pastels, stock spa imagery.
 
-**Brand architecture.**
-```
-DanceSoul  (master brand)
- └─ The DanceSoul Method™  (proprietary practice / IP)
-     ├─ Sessions   — Private · Group · Corporate
-     ├─ Retreats   — immersive, premium
-     ├─ Academy    — online courses & membership
-     └─ Certification — Facilitator L1 · L2 · Master
-```
+---
 
-**Values, made operational** (each becomes a design/UX rule, not a poster):
+## 3. Logo System Recommendation
 
-| Value | How it shows up |
+**Concept:** a single continuous line forming a **body-in-motion that resolves into a rising “soul” curve** — one gesture, one weight. Symbol-first system (the name is too long to be the mark).
+
+| Asset | Definition |
 |---|---|
-| Freedom | No choreography, no levels; open layouts, generous whitespace |
-| Presence | Slow motion, no autoplay noise, calm pacing |
-| Authenticity | Real people, real emotion; zero stock imagery |
-| Transformation | Every page carries a before→after arc |
-| Nature | Tropical light, organic texture, never literal (no lotus clichés) |
-| Elegance | Editorial typography, architectural grids |
-| Safety | Explicit inclusion, clear expectations, trust signals |
-| Luxury simplicity | Remove until it breaks, then add back one thing |
+| Primary | Symbol + `DanceSoulTherapy` serif wordmark |
+| Secondary | Stacked / horizontal lockups |
+| Monogram | `DS` ligature drawn from the symbol — app icon, signet, merch |
+| Favicon | Symbol only, optically corrected at 16px |
+| Black / White | Single-color masters |
+| Gold | Warm gold on emerald/navy — hero luxury lockup |
 
-**Audience tiers** (prioritised for messaging and funnels):
-
-| Tier | Segment | Primary offer | Emotional driver |
-|---|---|---|---|
-| 1 | Burnout professionals / entrepreneurs | Private, Corporate, Retreats | Relief, control regained |
-| 2 | Wellness & yoga practitioners | Group, Academy, Certification | Depth beyond yoga |
-| 3 | Luxury & retreat travelers | Retreats, Resort partnerships | Rare, memorable experience |
-| 4 | Expats / residents (Koh Samui) | Group, Private | Community, routine |
-| 5 | Aspiring facilitators | Certification, Academy | Purpose, income |
+**Rules:** one line weight, no gradients in the mark, legible at 16px, embroiderable (≤2 colors), clear-space = cap height, min size 24px digital.
 
 ---
 
-## 3. Verbal identity
+## 4. Brand Identity System
 
-**Voice.** Grounded, sensory, confident, unadorned. Speaks to the body. Short sentences. No mysticism, no clinical jargon, no exclamation marks.
-
-**Tone by context.** Warm on Home/About; precise and reassuring on Booking/FAQ; authoritative on Method/Certification; cinematic on Retreats.
-
-**Do / Don't.**
-- Do: "Move what you carry." · "The body says what words won't."
-- Don't: "Unlock your divine feminine energy" · "Heal your trauma in one session" (claim risk) · "Sacred journey of the soul."
-
-**Tagline — options** (claim-safe, ownable), keeping your current one as A:
-
-| # | Tagline | Note |
-|---|---|---|
-| A | Awaken • Express • Heal | Current; monitor "Heal" for claim risk |
-| B | **Move. Feel. Return.** | Rhythmic, safe, ownable |
-| C | Come back to your body. | Warm, human, memorable |
-| D | The practice of feeling. | Category-defining |
-
-**Naming system.** Sessions, Retreats, Academy, Certification, Method, Circle (community), Journal (blog). Consistent, calm nouns — no cute product names.
-
----
-
-## 4. Visual identity — direction (files produced on approval)
-
-Reference altitude: **Aman × Aesop × Six Senses** — restraint, editorial confidence, natural luxury. Anti-references: mandalas, lotus, watercolor blobs, script fonts, rainbow gradients, chakras.
-
-**Logo system.**
-- **Symbol (primary asset):** a single continuous line forming an abstracted **body-in-motion that doubles as a rising/soul curve** — one gesture, embroiderable, works at 16px. This is the hero of the system.
-- **Wordmark:** `DanceSoul` in a refined high-contrast serif; `Therapy`/`Method` set small in tracked-out sans as descriptor.
-- **Monogram:** `DS` ligature derived from the symbol — app icon, favicon, signet, merch.
-- **Lockups:** primary (symbol + wordmark), stacked, horizontal, symbol-only.
-- **Variants required:** light, dark, gold-on-ink, black, white, social avatar (symbol in circle). All from one master.
-
-**Color palette** (evolves the MVP toward luxury; hex are the working system):
+**Color palette** (working hex):
 
 | Role | Name | Hex |
 |---|---|---|
-| Foundation | Sanctuary Sand | `#EDE4D8` |
-| Ink | Deep Earth | `#1C1A17` |
-| Signature | Terracotta Glow | `#C46E52` |
-| Grounding | Eucalyptus | `#3E4E43` |
-| Luxury accent | Muted Gold | `#B08A4F` |
-| Paper | Warm White | `#F6F0E8` |
+| Ground | Jungle Emerald | `#10362B` |
+| Ground alt | Deep Navy | `#0C1B2A` |
+| Ink | Near-Black | `#0B0F0E` |
+| Signature | Warm Gold | `#C9A24B` |
+| Accent | Sunrise Amber | `#E4A46A` |
+| Light | Natural Sand | `#F3ECE1` |
 
-Discipline: one accent per view. Gold used sparingly, as jewelry.
+Discipline: dark grounds, sand for reading surfaces, gold as jewelry — one accent per view.
 
-**Typography.**
-- Display/Editorial serif (e.g. Canela / Cormorant class) — headlines, emotion.
-- Humanist sans (e.g. Söhne / Inter class) — UI, body, legibility.
-- Two families only. Type *is* the brand's sophistication.
+**Typography.** Two families only. Display: high-contrast serif (Canela/Cormorant class) — emotion. Text/UI: humanist sans (Söhne/Inter class) — clarity. Modular scale 1.25.
 
-**Photography & film.** Real movement, motion blur embraced; natural golden light; genuine emotion over posed smiles; tropical texture implied, not postcard. Silent looping hero footage. One art-directed shoot > 100 stock images.
+**Spacing/grid.** 8-pt system (4/8/16/24/40/64/104). 12-col desktop, 4-col mobile, ~1200px max, wide editorial margins. Radii: 12px / 100px pill only.
 
-**Iconography.** Thin, single-weight line, rounded terminals; minimal; never decorative.
+**Iconography.** Thin single-weight line, rounded terminals, minimal, functional — never decorative.
 
-**Motion principles.** Slow, weighted, natural easing (like breath and body). Reveal on scroll, never bounce. Reduced-motion respected (accessibility). Motion signals calm and premium — restraint over spectacle.
+**Photography.** Real movement, motion blur embraced; golden natural light; genuine emotion over posed smiles; jungle/tropical texture implied. One commissioned shoot > stock.
 
-**Graphic language.** Generous negative space, architectural grid, thin rules, the symbol used as a quiet watermark. Space is the luxury.
+**Illustration.** Restrained: the logo line as a recurring motif, subtle particle/light texture. No literal figures.
 
----
+**Graphic rules.** Negative space is the signature. Symbol as quiet watermark. Thin gold rules. Never more than one accent or one focal image per view.
 
-## 5. Design system (tokens)
-
-Single source of truth so web, app, print, and social stay coherent:
-- **Spacing:** 4px base, 8-pt scale (4/8/16/24/40/64/104).
-- **Grid:** 12-col web, 4-col mobile; max content width ~1200px; wide editorial margins.
-- **Radius:** 2 steps (12 / 100px pill).
-- **Type scale:** modular 1.25 ratio.
-- **Tokens** exported once (JSON) → Tailwind theme, app, and Figma consume the same values.
+**Brand voice.** Grounded, sensory, confident, unadorned. Speaks to the body. Short sentences.
+**Tone by context.** Warm (Home/About) · precise & reassuring (Booking/FAQ) · authoritative (Method/Corporate) · cinematic (Retreats). No mysticism, no clinical jargon, no exclamation marks.
 
 ---
 
-## 6. Website architecture
+## 5. Website Architecture
 
-**Sitemap** (from your structure, ordered for the funnel):
-`Home · What is DanceSoul · About · Experiences [Private · Group · Corporate · Retreats] · Facilitator Training · Academy · Testimonials · Gallery · Journal · FAQ · Contact · Booking`
+Funnel-ordered:
+`Home · What is DanceSoulTherapy · About · Private · Group · Corporate · Retreats · Testimonials · Gallery · Blog · FAQ · Contact · Booking`
 
-**Page intent (one line each):**
-- **Home** — emotional hook → proof → offer → book. Cinematic, minimal.
-- **What is DanceSoul** — define the Method and the category; the credibility page.
-- **About** — founder + philosophy; human trust.
-- **Private / Group / Corporate** — one job each: qualify + book.
-- **Retreats** — the flagship luxury experience; editorial landing (§13/§12).
-- **Facilitator Training** — the growth engine; sells the Method as a path.
-- **Academy** — courses/membership funnel (Phase 2).
-- **Testimonials / Gallery** — proof and emotion.
-- **Journal** — SEO + authority engine.
-- **FAQ / Contact / Booking** — remove friction, convert.
-
-**Core UX flows.** Discover → Feel (story) → Trust (proof/FAQ) → Book (≤3 steps) → Confirm (WhatsApp + calendar) → Return (membership/retreat). One primary CTA per page. Persistent, quiet "Book" affordance. Mobile-first (most traffic is on-phone tourists/expats).
-
-**Conversion rules.** Every objection answered inline (see marketing plan §UX). Booking never blocked by payment. Human fallback (WhatsApp) always one tap away.
+Flow: Discover → Feel → Trust → Book → Return. One primary CTA per page; persistent quiet **Book**; mobile-first; WhatsApp fallback one tap away.
 
 ---
 
-## 7. SEO strategy (international, from day one)
+## 6. Page-by-Page SEO Blueprint
 
-**Pillar → cluster model.**
+**Home** — Goal: hook→proof→book. Intent: discovery. H1: *Come back to your body.* Title: `DanceSoulTherapy — Movement Therapy in Koh Samui`. Meta: `Release tension and emotion through guided movement and breath. Premium movement therapy, private sessions and retreats in Koh Samui.` Sections: hero · what it is · benefits · offers · transformation · retreats · proof · FAQ · CTA. CTA: Book a session. Links: What is DST, Retreats, Booking. Schema: Organization, LocalBusiness, WebSite. Keywords: movement therapy koh samui, dance therapy, somatic wellbeing.
 
-| Pillar page | Cluster (blog) topics |
-|---|---|
-| What is movement therapy | vs. yoga · vs. meditation · emotional release · somatic basics |
-| Dance therapy Koh Samui (local) | classes Lamai/Chaweng · wellness things to do · expat wellbeing |
-| Burnout recovery through movement | stress · nervous system · corporate wellbeing |
-| Wellness retreats Koh Samui | what to expect · packing · solo retreats |
-| Become a facilitator | certification path · career · income |
+**What is DanceSoulTherapy** — Goal: define category + Method (credibility page). Intent: research. H1: *What is movement therapy?* Title: `What Is Movement Therapy? The DanceSoul Method`. Meta: `How guided movement and breath release stored emotion — the DanceSoul Method explained.` Sections: definition · the Method · vs yoga/meditation · science-lite · who it's for. CTA: Try a session. Links: Private, Group, Booking. Schema: Article, FAQPage. Keywords: what is movement therapy, somatic movement, emotional release.
 
-**Local SEO (now):** Google Business Profile (Lamai + Chaweng), NAP consistency, reviews engine, local schema.
-**International SEO (Phase 2):** locale-based architecture `dancesoul.com/en/`, `/fr/`, `hreflang`, per-market retreat pages. Design the URL/i18n structure now so migration is free later.
-**Technical:** semantic HTML5, `schema.org` (Organization, LocalBusiness, Course, Event, FAQPage, Review), OpenGraph/Twitter cards, sitemap, robots, canonicals. Core Web Vitals budget: LCP <2.5s, CLS <0.1, INP <200ms. Image: AVIF/WebP, responsive `srcset`, lazy-load, width/height set. Targets: Lighthouse 90+ across all four — achievable with the stack in §8.
+**About** — Goal: human trust. Intent: brand. H1: *Behind DanceSoulTherapy.* Title: `About — DanceSoulTherapy`. Meta: `The conviction behind DanceSoulTherapy: the body heals what the mind can't reach.` Sections: founder · philosophy · principles · place. CTA: Book. Links: What is DST, Retreats. Schema: AboutPage, Person. Keywords: dancesoultherapy founder, movement therapy practitioner koh samui.
+
+**Private Sessions** — Goal: book premium 1:1. Intent: high. H1: *Private sessions.* Title: `Private Movement Therapy Sessions — Koh Samui`. Meta: `Tailored one-to-one sessions, in-studio or at your villa. From 800 THB.` Sections: for whom · formats · pricing · what to expect. CTA: Book private. Links: Booking, Corporate. Schema: Service, Offer. Keywords: private dance therapy koh samui, 1:1 somatic session.
+
+**Group Sessions** — Goal: fill classes. Intent: local. H1: *Group classes.* Title: `Group Movement Therapy Classes — Lamai & Chaweng`. Meta: `Small-group classes, all levels, from 400 THB. Lamai and Chaweng.` Sections: schedule · levels · locations · pricing. CTA: Reserve a spot. Links: Booking, FAQ. Schema: Event, Service. Keywords: dance therapy class koh samui, group somatic movement.
+
+**Corporate Wellness** — Goal: B2B leads. Intent: commercial. H1: *Corporate wellbeing, in motion.* Title: `Corporate Wellness & Team Movement — Koh Samui`. Meta: `On-site movement sessions for teams, retreats and offsites. Reduce burnout, restore presence.` Sections: problem · offer · formats · outcomes · enquire. CTA: Request a proposal. Links: Retreats, Contact. Schema: Service. Keywords: corporate wellness koh samui, team wellbeing retreat.
+
+**Retreats** — Goal: flagship bookings. Intent: high-value. H1: *Retreats.* Title: `Movement Therapy Retreats — Koh Samui`. Meta: `Immersive premium retreats built around movement and emotional release.` Sections: experience · itinerary · place · transformation · proof · dates/scarcity · apply. CTA: Apply / reserve. Links: Booking, Testimonials. Schema: Event, Product, Offer. Keywords: wellness retreat koh samui, movement therapy retreat thailand.
+
+**Testimonials** — Goal: proof. H1: *What it feels like after.* Title: `Testimonials — DanceSoulTherapy`. Meta: `Real experiences from sessions and retreats.` Sections: quotes · video · outcomes. CTA: Book. Links: Retreats, Booking. Schema: Review, AggregateRating. Keywords: dancesoultherapy reviews.
+
+**Gallery** — Goal: emotional immersion. H1: *In motion.* Title: `Gallery — DanceSoulTherapy`. Meta: `Movement, light and place.` Sections: film · stills. CTA: Book. Links: Retreats. Schema: ImageGallery. Keywords: movement therapy koh samui photos.
+
+**Blog** — Goal: SEO authority. H1: *Journal.* Title: `Journal — Movement, Emotion, Wellbeing`. Meta: `Essays on movement therapy, somatic practice and emotional wellbeing.` Sections: pillars · latest · categories. CTA: Subscribe. Links: pillar pages, Booking. Schema: Blog, Article. Keywords: see §10 clusters.
+
+**FAQ** — Goal: remove friction. H1: *Your questions.* Title: `FAQ — DanceSoulTherapy`. Meta: `Do I need to dance? Is it therapy? How to book?` Sections: accordion. CTA: Book. Links: Booking, What is DST. Schema: FAQPage. Keywords: dance therapy for beginners.
+
+**Contact** — Goal: reach + local. H1: *Get in touch.* Title: `Contact — DanceSoulTherapy Koh Samui`. Meta: `WhatsApp, email and locations in Lamai and Chaweng.` Sections: WhatsApp · email · map · hours. CTA: Message on WhatsApp. Links: Booking. Schema: LocalBusiness, ContactPoint. Keywords: dancesoultherapy contact koh samui.
+
+**Booking** — Goal: convert. H1: *Book your session.* Title: `Book — DanceSoulTherapy`. Meta: `Choose your experience and time. Pay on-site or online.` Sections: embedded scheduler · options · confirmation. CTA: Confirm booking. Links: all offers. Schema: Reservation. Keywords: book movement therapy koh samui.
 
 ---
 
-## 8. Technology stack — with justification
+## 7. Content and Messaging Framework
 
-Chosen for premium feel + Lighthouse 90+ + scale to app/academy, without over-engineering.
+**Principles.** Speak to the body, not the aura. Concrete over abstract ("release tension you didn't know you held" > "unlock your energy"). Every page carries a before→after arc. One idea per section. Proof beside every claim.
+**Message hierarchy:** feeling → understanding → trust → action.
+**Voice guardrails:** no spiritual clichés, no medical promises, no hype, no exclamation marks.
+**Reusable spine:** *This isn't a dance class. It's a practice where movement and breath let what you carry leave.*
 
-| Layer | Choice | Why |
+---
+
+## 8. Recommended Tech Stack
+
+Minimum viable, maximum scalable.
+
+| Layer | Choice | One-line why |
 |---|---|---|
-| Framework | **Next.js (App Router)** | SSR/SSG + image optimization + i18n + SEO control; one framework scales from site to academy. (Astro is faster for pure-static, but you need auth, dashboards, membership — Next carries all of it.) |
-| Styling | **Tailwind + design tokens** | Coherence with the token system; small CSS; fast. |
-| Motion | **Motion (Framer Motion)** | Declarative, respects reduced-motion; premium easing. |
-| Hosting/CDN | **Vercel** (already connected) | Zero-config Next, edge CDN, previews; Cloudflare later if egress/cost demands. |
-| Database/Auth | **Supabase** (Postgres) | Auth + DB + storage in one; powers bookings, profiles, academy, membership; open-source, portable (Neon is an alt if you want DB-only). |
-| Payments | **Stripe** | Global, trusted, subscriptions for membership/academy. |
-| CMS (Journal) | **Sanity or Contentful** | Non-dev editing for blog/retreats; structured content, i18n-ready. |
-| Email/Newsletter | **Resend + Loops/Beehiiv** | Transactional + marketing separation. |
+| Framework | **Next.js (App Router)** | SSR/SSG + image opt + i18n + auth in one; scales site→academy without a rewrite. |
+| Styling | **Tailwind + tokens** | Coherent design system, tiny CSS, fast. |
+| Motion | **Motion (Framer Motion)** | Premium easing; respects reduced-motion. |
+| CMS | **Sanity** | Structured, i18n-ready blog/retreats editable without devs. |
+| Backend | **Supabase (Postgres)** | Auth + DB + storage for bookings/profiles later; one service, portable. |
+| Payments | **Stripe** | Global, subscriptions for future membership. |
+| Hosting | **Vercel** (already linked) | Zero-config Next, edge CDN, previews. |
 
-Deliberately **not** adding: native mobile stack yet, microservices, custom infra. Complexity is the enemy of luxury and of maintainability.
-
----
-
-## 9. Booking system
-
-**Recommendation: start managed, migrate to owned.**
-- **Phase 0–1:** a scalable managed tool — **Cal.com** (open-source, self-hostable, brandable, API-first) or Calendly — embedded, styled to brand. Integrates Google Calendar, Stripe, email, WhatsApp confirmation, Google Maps directions.
-- **Phase 2:** native booking on Supabase when app + membership demand shared data (session history, mood tracking, credits).
-Integrations required throughout: WhatsApp, Instagram link-in-bio, email capture (newsletter), Google Maps, Google Calendar, Stripe. Design the data model now for app compatibility (users, sessions, bookings, credits).
+**Deliberately excluded:** WordPress, Firebase, Convex, Neon, Webflow/Framer, native app (Phase 3). Complexity is the enemy of luxury and Lighthouse.
 
 ---
 
-## 10. Mobile application — future architecture
+## 9. Booking and Integrations
 
-Build only in Phase 3, reusing Supabase + tokens.
-- **Stack:** Expo / React Native (shares design tokens + TypeScript with web).
-- **Modules:** bookings · client profile · session history · mood tracking · retreat booking · community (Circle) · courses · meditation/movement audio · push notifications · offline mode (cached audio/courses).
-- **Data:** same Supabase backend as web — one source of truth.
-- **Future:** wearable integration (HRV/stress → suggested sessions) as a differentiator, not v1.
+**Booking: Cal.com** (embedded, brand-styled) — open-source, API-first, self-hostable, syncs Google Calendar + Stripe; migrate to native Supabase booking only when the app/membership needs shared data.
+
+**Integrations:** WhatsApp (primary conversion + confirmations) · Instagram (link-in-bio, embeds) · YouTube (retreat films) · Google Maps (locations) · email (Resend transactional) · newsletter (Beehiiv/Loops) · GA4 + Search Console + Microsoft Clarity (analytics/heatmaps). All deferred-loaded to protect Core Web Vitals.
 
 ---
 
-## 11. Facilitator certification ecosystem
+## 10. SEO Strategy
 
-The scalability engine. Requires the Method (§1) documented first.
-- **Level 1** — Practitioner: foundations, safety, core sequences. Online + assessed practical.
-- **Level 2** — Facilitator: group leadership, emotional safety, business toolkit.
-- **Master Facilitator** — trains/certifies others; enables franchise.
-- **Platform:** Academy (Next + Supabase) hosts curriculum, video, assessments, digital certificates (verifiable ID), CE tracking.
-- **Revenue:** tuition + annual license + brand-use fee — the recurring, location-independent income that funds global growth.
+**International (design now, ship later):** locale path architecture `/en/ /fr/`, `hreflang`, per-market retreat pages; English-first, French second (founder/expat base).
 
----
+**Keyword clusters (pillar → cluster):**
+- *Movement therapy* → what it is · vs yoga · vs meditation · somatic release · nervous system.
+- *Koh Samui wellness (local)* → classes Lamai/Chaweng · things to do · expat wellbeing · retreats.
+- *Burnout recovery* → stress · corporate wellbeing · professionals.
+- *Facilitator path* (Phase 2) → certification · career.
 
-## 12. Retreats — premium sub-brand
+**Blog roadmap:** 2 pillar pages + 2 cluster posts/month, each internally linked to a money page.
 
-- **Positioning:** flagship, aspirational, price-anchoring for the whole brand.
-- **Landing pages:** editorial, cinematic, one per retreat; itinerary, place, transformation arc, proof, scarcity (cohort size/date).
-- **Booking:** deposit via Stripe, application-style for exclusivity.
-- **Photography:** commissioned, film-led; the retreat shoot doubles as brand hero content.
-- **Partnerships:** co-host with resorts (Six Senses / Aman tier on Samui) for venue + audience.
+**Local SEO:** Google Business Profile (Lamai + Chaweng), consistent NAP, review engine, LocalBusiness schema, embedded Maps.
+
+**Technical:** semantic HTML5; schema (Organization, LocalBusiness, Service, Event, Course, FAQPage, Review, Article); OpenGraph/Twitter; sitemap/robots/canonicals. CWV budget LCP<2.5s / CLS<0.1 / INP<200ms. Images AVIF/WebP + responsive `srcset` + lazy-load + explicit dimensions. Accessibility WCAG 2.1 AA (contrast, focus, alt, reduced-motion). Targets: Lighthouse 90+ on all four — the stack above delivers this by default.
 
 ---
 
-## 13. Content ecosystem — one identity everywhere
-
-| Channel | Role |
-|---|---|
-| Instagram | Emotional vitrine; Reels-led; DM→booking (see marketing plan) |
-| YouTube | Depth: method explainers, retreat films, facilitator stories |
-| Journal (blog) | SEO authority; pillar/cluster engine |
-| Newsletter | Owned audience; retreat launches, membership |
-| Podcast | Category authority (Phase 2+); interviews on embodiment |
-| Circle (community) | Retention, membership, facilitator network |
-
-Every asset uses the same tokens, type, voice, and symbol — coherence is the compounding advantage.
-
----
-
-## 14. Ecosystem roadmap (sequenced, not stacked)
+## 11. MVP-to-Global Roadmap
 
 | Phase | Window | Ship | Goal |
 |---|---|---|---|
-| **0 — Live** | now | MVP site + WhatsApp booking | Validate demand cheaply |
-| **1 — Foundation** | 0–3 mo | Brand identity (logo/system), premium Next.js site, Cal.com booking, Google Business, Journal + SEO base, **document the Method™** | Premium presence + local dominance |
-| **2 — Authority** | 3–9 mo | Academy MVP (1 course + membership), Facilitator L1, Retreat landing + first cohort, i18n scaffolding, newsletter/YouTube | Recurring revenue + reach |
-| **3 — Platform** | 9–18 mo | Native booking on Supabase, mobile app, Certification L2/Master, international locales | Scalable ecosystem |
-| **4 — Scale** | 18 mo+ | Franchise/license model, merch, wearable integration, multi-market | World reference |
+| 0 — Live | now | MVP site + WhatsApp booking | Validate demand |
+| 1 — Foundation | 0–3 mo | Identity system + premium Next.js site + Cal.com + GBP + blog/SEO base + **document Method™** | Premium presence, local dominance |
+| 2 — Authority | 3–9 mo | Retreat cohort, Academy MVP, Facilitator L1, i18n, newsletter/YouTube | Recurring revenue, reach |
+| 3 — Platform | 9–18 mo | Supabase booking, mobile app, Certification L2/Master | Scalable ecosystem |
+| 4 — Scale | 18 mo+ | Franchise/license, merch, multi-market | World reference |
 
-Gate each phase on the prior proving out. Discipline here is what separates a brand from a brochure.
-
----
-
-## 15. Decisions I need to start (Step 3 approval gate)
-
-Please confirm/choose:
-1. **The Method™** — approve documenting a proprietary, trademarked framework as the core IP? (highest priority)
-2. **Name/claim governance** — keep "Therapy" with wellness-disclaimer language, or shift outward-facing to "Method"?
-3. **Tagline** — keep A (*Awaken • Express • Heal*) or adopt B/C/D?
-4. **Brand architecture** — approve `DanceSoul` master + `Method` endorsement?
-5. **Visual direction** — approve the Aman/Aesop altitude + symbol-first system, and **send reference visuals** so we lock against them?
-6. **Phase 1 scope** — approve identity + premium Next.js rebuild + Cal.com as the first build, replacing the MVP?
-
-On your approval of these six, I proceed to implementation — starting with the logo/identity system and the Phase 1 site — not before.
+Gate each phase on the prior proving out.
 
 ---
 
-*No code generated. No deployment triggered. This document is the Brand Blueprint requested in Step 2; implementation begins only after Step 3 approval.*
+## 12. Critical Decisions Needing Approval
+
+1. **The DanceSoul Method™** — approve building a trademarked proprietary framework as core IP.
+2. **Claim governance** — keep "Therapy/Heal" with wellness-disclaimer language (recommended).
+3. **Tagline** — keep *Awaken • Express • Heal* as the ritual signature (recommended: it's ownable and three-beat) with descriptor "Movement therapy."
+4. **Logo** — approve symbol-first single-line body/soul mark + `DS` monogram.
+5. **Palette/type** — approve emerald/navy/gold + serif/sans pairing; **send reference visuals to lock**.
+6. **Phase 1 scope** — premium Next.js rebuild + Cal.com replacing the MVP.
+7. **Tech** — approve Next.js · Tailwind · Sanity · Supabase · Stripe · Vercel.
+
+---
+
+## APPROVAL CHECKLIST
+
+- [ ] Method™ as core IP
+- [ ] Claim governance (keep name, disclaim)
+- [ ] Tagline: keep *Awaken • Express • Heal*
+- [ ] Logo: symbol-first + DS monogram
+- [ ] Palette & typography direction
+- [ ] Send reference visuals
+- [ ] Phase 1 scope (Next.js rebuild + Cal.com)
+- [ ] Tech stack confirmed
+
+Approve (or amend) these and I begin Phase 2 — starting with the logo/identity system, then the site — without rethinking strategy.
