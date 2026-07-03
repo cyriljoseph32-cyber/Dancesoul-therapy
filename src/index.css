@@ -1,15 +1,15 @@
 :root {
-  /* Palette — direction design DanceSoulTherapy */
-  --sand: #ede4d8;
-  --sand-deep: #e2d5c4;
-  --terracotta: #c46e52;
-  --terracotta-deep: #a85639;
-  --eucalyptus: #3e4e43;
-  --eucalyptus-deep: #2c3a30;
-  --ink: #1c1a17;
-  --gold: #b08a4f;
-  --paper: #f6f0e8;
-  --muted: #6c6459;
+  /* Palette — DanceSoulTherapy "Rise" identity */
+  --emerald: #10362b;
+  --emerald-deep: #0c2a21;
+  --navy: #0c1b2a;
+  --ink: #0b0f0e;
+  --gold: #c9a24b;
+  --gold-soft: #d9b975;
+  --amber: #e4a46a;
+  --sand: #f3ece1;
+  --sand-dim: rgba(243, 236, 225, 0.66);
+  --line: rgba(201, 162, 75, 0.22);
 
   --serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   --sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
@@ -27,8 +27,8 @@ html {
 
 body {
   font-family: var(--sans);
-  color: var(--ink);
-  background: var(--sand);
+  color: var(--sand);
+  background: var(--emerald-deep);
   font-weight: 400;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -50,11 +50,11 @@ h2,
 h3 {
   font-family: var(--serif);
   font-weight: 500;
-  line-height: 1.1;
+  line-height: 1.08;
   letter-spacing: -0.01em;
 }
 
 ::selection {
-  background: var(--terracotta);
-  color: var(--sand);
+  background: var(--gold);
+  color: var(--ink);
 }

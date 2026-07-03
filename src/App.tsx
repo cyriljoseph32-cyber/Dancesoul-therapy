@@ -8,6 +8,44 @@ const BOOK_MSG = encodeURIComponent(
 )
 const waLink = `https://wa.me/${WHATSAPP}?text=${BOOK_MSG}`
 
+// "Rise" brand mark
+function RiseMark({
+  size = 44,
+  arch = 'var(--gold)',
+  sun = 'var(--gold)',
+}: {
+  size?: number
+  arch?: string
+  sun?: string
+}) {
+  return (
+    <svg
+      width={size}
+      height={size * 0.78}
+      viewBox="0 0 100 78"
+      fill="none"
+      strokeLinecap="round"
+      strokeWidth={4}
+      aria-hidden="true"
+    >
+      <path d="M16 66 A34 34 0 0 1 84 66" stroke={arch} />
+      <line x1="20" y1="66" x2="80" y2="66" stroke={arch} />
+      <path d="M37 66 A13 13 0 0 1 63 66" stroke={sun} />
+      <line x1="50" y1="49" x2="50" y2="41" stroke={sun} />
+      <line x1="39" y1="52" x2="34.5" y2="46.5" stroke={sun} />
+      <line x1="61" y1="52" x2="65.5" y2="46.5" stroke={sun} />
+    </svg>
+  )
+}
+
+function Wordmark() {
+  return (
+    <span className="wm">
+      Dance<span className="wm-gold">Soul</span>Therapy
+    </span>
+  )
+}
+
 const nav = [
   ['The Concept', '#concept'],
   ['Experiences', '#offers'],
@@ -85,10 +123,7 @@ const faqs = [
     'I’m shy and uncomfortable with my body.',
     'That’s exactly where it begins. Small group, no judgement, no pressure to “do it right”.',
   ],
-  [
-    'Are men welcome?',
-    'Absolutely. All bodies, all genders, all ages.',
-  ],
+  ['Are men welcome?', 'Absolutely. All bodies, all genders, all ages.'],
   [
     'How do I book?',
     'Online via WhatsApp, in seconds. Pay on-site or online.',
@@ -101,7 +136,8 @@ function App() {
       {/* HEADER */}
       <header className="header">
         <a href="#top" className="brand">
-          DanceSoul<span>Therapy</span>
+          <RiseMark size={30} />
+          <Wordmark />
         </a>
         <nav className="nav">
           {nav.map(([label, href]) => (
@@ -118,6 +154,9 @@ function App() {
       {/* HERO */}
       <section className="hero" id="top">
         <div className="hero-inner">
+          <div className="hero-mark">
+            <RiseMark size={72} />
+          </div>
           <p className="eyebrow">Dance therapy · Koh Samui</p>
           <h1>Move what you carry.</h1>
           <p className="hero-sub">
@@ -132,6 +171,7 @@ function App() {
               Discover the concept
             </a>
           </div>
+          <p className="hero-tag">Awaken · Express · Heal</p>
         </div>
       </section>
 
@@ -281,6 +321,7 @@ function App() {
 
       {/* FINAL CTA */}
       <section className="final-cta">
+        <RiseMark size={56} />
         <h2>One hour for you.</h2>
         <p>Book it.</p>
         <a
@@ -296,7 +337,8 @@ function App() {
       {/* FOOTER */}
       <footer className="footer">
         <div className="footer-brand">
-          DanceSoul<span>Therapy</span>
+          <RiseMark size={34} />
+          <Wordmark />
         </div>
         <p>Dance therapy in Koh Samui</p>
         <p className="footer-loc">
@@ -312,7 +354,7 @@ function App() {
           </a>
           <a href="#top">Book</a>
         </div>
-        <p className="signature">Move. Breathe. Release.</p>
+        <p className="signature">Awaken · Express · Heal</p>
       </footer>
 
       {/* MOBILE FLOATING CTA */}
