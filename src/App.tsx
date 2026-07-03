@@ -1,97 +1,97 @@
 import './App.css'
 
-// ⚙️ À personnaliser avant mise en ligne
-const WHATSAPP = '66000000000' // numéro WhatsApp (format international sans +)
-const INSTAGRAM = 'https://instagram.com/dancesoultherapy'
+// Contacts
+const WHATSAPP = '66814734649' // WhatsApp number, international format without +
+const INSTAGRAM = 'https://www.instagram.com/dancesoultherapy'
 const BOOK_MSG = encodeURIComponent(
-  "Bonjour DanceSoulTherapy, j'aimerais réserver une séance 🙏",
+  "Hi DanceSoulTherapy, I'd like to book a session 🙏",
 )
 const waLink = `https://wa.me/${WHATSAPP}?text=${BOOK_MSG}`
 
 const nav = [
-  ['Le Concept', '#concept'],
-  ['Expériences', '#offres'],
-  ['Privé', '#prive'],
-  ['Hôtels & Retreats', '#hotels'],
-  ['À propos', '#apropos'],
+  ['The Concept', '#concept'],
+  ['Experiences', '#offers'],
+  ['Private', '#private'],
+  ['Hotels & Retreats', '#hotels'],
+  ['About', '#about'],
   ['FAQ', '#faq'],
 ]
 
 const benefits = [
-  ['Relâcher', 'ce que le corps retient.'],
-  ['Respirer', 'plus ample, plus libre.'],
-  ['Revenir', 'de la tête vers le corps.'],
-  ['Repartir', 'plus léger, plus clair.'],
+  ['Release', 'what the body holds.'],
+  ['Breathe', 'deeper, freer.'],
+  ['Return', 'from your head to your body.'],
+  ['Leave', 'lighter, clearer.'],
 ]
 
 const offers = [
   {
-    t: 'Cours collectifs',
-    d: 'En groupe, tous niveaux. Six rendez-vous par semaine à Lamai et Chaweng, petit groupe (10 max).',
-    p: 'dès 400 THB',
+    t: 'Group classes',
+    d: 'In a group, all levels. Six sessions a week in Lamai and Chaweng, small groups (max 10).',
+    p: 'from 400 THB',
   },
   {
-    t: 'Cours enfants',
-    d: 'La danse comme espace de confiance et de joie. L’enfant apprend à habiter son corps.',
+    t: 'Kids classes',
+    d: 'Dance as a space of confidence and joy. Children learn to inhabit their own bodies.',
     p: '400 THB',
   },
   {
-    t: 'Séances privées',
-    d: 'Sur mesure, en salle ou à domicile. Une attention entière, sans regard, à votre rythme.',
-    p: 'dès 800 THB',
+    t: 'Private sessions',
+    d: 'Tailored to you, in-studio or at home. Full attention, no eyes on you, at your own pace.',
+    p: 'from 800 THB',
   },
   {
-    t: 'Sessions extérieures',
-    d: 'Le mouvement rencontre le paysage. En groupe, face à la mer, dans la lumière de fin de journée.',
-    p: 'dès 500 THB / pers.',
+    t: 'Outdoor sessions',
+    d: 'Movement meets the landscape. In a group, facing the sea, in the light of late afternoon.',
+    p: 'from 500 THB / person',
   },
   {
-    t: 'Hôtels & Resorts',
-    d: 'Une expérience signature clé en main, animée sur votre site pour votre clientèle wellness.',
-    p: '2 500 – 3 500 THB',
+    t: 'Hotels & Resorts',
+    d: 'A signature, turnkey experience hosted on-site for your wellness guests.',
+    p: '2,500 – 3,500 THB',
   },
   {
     t: 'Retreats',
-    d: 'Des retraites immersives autour du mouvement et de la libération émotionnelle.',
-    p: '6 000 – 12 000 THB',
+    d: 'Immersive retreats built around movement and emotional release.',
+    p: '6,000 – 12,000 THB',
   },
 ]
 
 const testimonials = [
   [
-    'Je suis venue sceptique, je suis repartie en larmes — les bonnes. Un soulagement que je n’avais pas senti depuis des mois.',
-    'Camille, expatriée',
+    'I came in sceptical and left in tears — the good kind. A relief I hadn’t felt in months.',
+    'Camille, expat',
   ],
   [
-    'Rien à voir avec un cours de danse. J’ai relâché des tensions que je portais sans le savoir.',
-    'Marc, résident',
+    'Nothing like a dance class. I released tension I didn’t even know I was carrying.',
+    'Marc, resident',
   ],
   [
-    'Nos clients en parlent encore. Une expérience à part.',
-    'Manager, resort Chaweng',
+    'Our guests still talk about it. A truly unique experience.',
+    'Manager, Chaweng resort',
   ],
 ]
 
 const faqs = [
   [
-    'Je ne sais pas danser. C’est un problème ?',
-    'Non, au contraire. Il n’y a rien à savoir. Le mouvement est libre, guidé, sans chorégraphie.',
+    'I can’t dance. Is that a problem?',
+    'Not at all — quite the opposite. There’s nothing to know. The movement is free, guided, with no choreography.',
   ],
   [
-    'C’est un cours ou une thérapie ?',
-    'Une pratique de bien-être par le mouvement. Ce n’est pas un soin médical, mais l’effet émotionnel est réel et immédiat.',
+    'Is it a class or therapy?',
+    'A movement-based wellbeing practice. It’s not medical care, but the emotional effect is real and immediate.',
   ],
   [
-    'Je suis timide, mal à l’aise avec mon corps.',
-    'C’est justement là que ça commence. Petit groupe, cadre sans jugement, aucune obligation de « faire bien ».',
+    'I’m shy and uncomfortable with my body.',
+    'That’s exactly where it begins. Small group, no judgement, no pressure to “do it right”.',
   ],
   [
-    'Les hommes sont-ils bienvenus ?',
-    'Oui, absolument. Tous les corps, tous les genres, tous les âges.',
+    'Are men welcome?',
+    'Absolutely. All bodies, all genders, all ages.',
   ],
   [
-    'Comment réserver ?',
-    'En ligne via WhatsApp, en quelques secondes. Paiement sur place ou en ligne.',
+    'How do I book?',
+    'Online via WhatsApp, in seconds. Pay on-site or online.',
   ],
 ]
 
@@ -111,31 +111,31 @@ function App() {
           ))}
         </nav>
         <a href={waLink} className="btn btn-sm" target="_blank" rel="noreferrer">
-          Réserver
+          Book
         </a>
       </header>
 
       {/* HERO */}
       <section className="hero" id="top">
         <div className="hero-inner">
-          <p className="eyebrow">Danse thérapeutique · Koh Samui</p>
-          <h1>Bougez ce que vous portez.</h1>
+          <p className="eyebrow">Dance therapy · Koh Samui</p>
+          <h1>Move what you carry.</h1>
           <p className="hero-sub">
-            Une heure pour libérer les tensions, retrouver votre souffle et
-            revenir à vous.
+            One hour to release tension, find your breath again and come back to
+            yourself.
           </p>
           <div className="hero-cta">
             <a href={waLink} className="btn" target="_blank" rel="noreferrer">
-              Réserver une séance
+              Book a session
             </a>
             <a href="#concept" className="btn btn-ghost">
-              Découvrir le concept
+              Discover the concept
             </a>
           </div>
         </div>
       </section>
 
-      {/* BÉNÉFICES */}
+      {/* BENEFITS */}
       <section className="benefits">
         {benefits.map(([t, d]) => (
           <div key={t} className="benefit">
@@ -148,21 +148,20 @@ function App() {
       {/* CONCEPT */}
       <section className="concept" id="concept">
         <div className="section-head">
-          <p className="eyebrow">Le concept</p>
-          <h2>Ce n’est pas un cours de danse.</h2>
+          <p className="eyebrow">The concept</p>
+          <h2>This isn’t a dance class.</h2>
         </div>
         <p className="lead">
-          C’est une pratique où le mouvement libre et la respiration laissent
-          remonter, puis partir, ce que vous portez : stress, tensions, émotions
-          retenues. Aucun niveau, aucun regard. Juste votre corps qui reprend la
-          parole.
+          It’s a practice where free movement and breath let what you carry rise
+          up and then leave: stress, tension, held-back emotion. No level, no
+          eyes on you. Just your body finding its voice again.
         </p>
         <div className="pillars">
           {[
-            ['Mouvement', 'libre, intuitif, sans chorégraphie.'],
-            ['Respiration', 'le fil qui relie le geste à l’émotion.'],
-            ['Expression', 'le corps dit ce que les mots taisent.'],
-            ['Libération', 'la tension part, la clarté revient.'],
+            ['Movement', 'free, intuitive, no choreography.'],
+            ['Breath', 'the thread linking gesture to emotion.'],
+            ['Expression', 'the body says what words won’t.'],
+            ['Release', 'tension leaves, clarity returns.'],
           ].map(([t, d]) => (
             <div key={t} className="pillar">
               <h3>{t}</h3>
@@ -172,18 +171,18 @@ function App() {
         </div>
       </section>
 
-      {/* OFFRES */}
-      <section className="offers" id="offres">
+      {/* OFFERS */}
+      <section className="offers" id="offers">
         <div className="section-head">
-          <p className="eyebrow">Cours & expériences</p>
-          <h2>Trouvez votre format.</h2>
+          <p className="eyebrow">Classes & experiences</p>
+          <h2>Find your format.</h2>
         </div>
         <div className="offer-grid">
           {offers.map((o) => (
             <article
               key={o.t}
               className="offer"
-              id={o.t === 'Séances privées' ? 'prive' : undefined}
+              id={o.t === 'Private sessions' ? 'private' : undefined}
             >
               <h3>{o.t}</h3>
               <p>{o.d}</p>
@@ -196,81 +195,79 @@ function App() {
       {/* TRANSFORMATION */}
       <section className="transform">
         <div className="transform-inner">
-          <p className="eyebrow light">Avant, après</p>
+          <p className="eyebrow light">Before, after</p>
           <h2>
-            Vous arrivez chargé.
+            You arrive weighed down.
             <br />
-            Vous repartez allégé.
+            You leave lighter.
           </h2>
           <p>
-            Une semaine, une émotion, une tension logée quelque part. Vous
-            bougez. Vous respirez. Vous laissez sortir. Vous repartez présent,
-            réaccordé à vous-même.
+            A week, an emotion, tension lodged somewhere. You move. You breathe.
+            You let it out. You leave present, back in tune with yourself.
           </p>
           <p className="whisper">
-            Ce n’est pas magique. C’est votre corps qui fait son travail.
+            It’s not magic. It’s your body doing its work.
           </p>
         </div>
       </section>
 
-      {/* HÔTELS */}
+      {/* HOTELS */}
       <section className="hotels" id="hotels">
         <div className="hotels-text">
-          <p className="eyebrow">Hôtels · Resorts · Retreats</p>
-          <h2>Une expérience signature pour votre lieu.</h2>
+          <p className="eyebrow">Hotels · Resorts · Retreats</p>
+          <h2>A signature experience for your venue.</h2>
           <p>
-            Offrez à vos clients une pratique rare et mémorable, animée sur site
-            avec une exécution premium. Ateliers clé en main et retraites
-            immersives.
+            Give your guests a rare, memorable practice, hosted on-site with
+            premium execution. Turnkey workshops and immersive retreats.
           </p>
           <a
             href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
-              'Bonjour, je représente un hôtel/resort et souhaite discuter d’un partenariat.',
+              'Hi, I represent a hotel/resort and would like to discuss a partnership.',
             )}`}
             className="btn"
             target="_blank"
             rel="noreferrer"
           >
-            Construisons votre expérience
+            Let’s build your experience
           </a>
         </div>
       </section>
 
-      {/* TÉMOIGNAGES */}
+      {/* TESTIMONIALS */}
       <section className="testimonials">
         <div className="section-head center">
-          <p className="eyebrow">Elles & ils l’ont vécu</p>
-          <h2>Ce qu’on ressent après.</h2>
+          <p className="eyebrow">They lived it</p>
+          <h2>What it feels like after.</h2>
         </div>
         <div className="quotes">
           {testimonials.map(([q, a]) => (
             <blockquote key={a}>
-              <p>« {q} »</p>
+              <p>“{q}”</p>
               <cite>— {a}</cite>
             </blockquote>
           ))}
         </div>
       </section>
 
-      {/* À PROPOS */}
-      <section className="about" id="apropos">
+      {/* ABOUT */}
+      <section className="about" id="about">
         <div className="section-head">
-          <p className="eyebrow">Derrière la marque</p>
-          <h2>Le corps guérit ce que le mental n’atteint pas.</h2>
+          <p className="eyebrow">Behind the brand</p>
+          <h2>The body heals what the mind can’t reach.</h2>
         </div>
         <p className="lead">
-          Née d’une conviction simple : nos émotions se logent dans le corps.
-          DanceSoulTherapy est un espace rare à Koh Samui — où l’on danse non
-          pour performer, mais pour se libérer. Chaque séance est une rencontre :
-          sécurisante, sincère, sans jugement.
+          Born from a simple conviction: our emotions live in the body.
+          DanceSoulTherapy is a rare space in Koh Samui — where you dance not to
+          perform, but to set yourself free. Every session is an encounter: safe,
+          sincere, without judgement.
         </p>
       </section>
 
       {/* FAQ */}
       <section className="faq" id="faq">
         <div className="section-head center">
-          <p className="eyebrow">Vos questions</p>
-          <h2>Avant de venir.</h2>
+          <p className="eyebrow">Your questions</p>
+          <h2>Before you come.</h2>
         </div>
         <div className="faq-list">
           {faqs.map(([q, a]) => (
@@ -284,15 +281,15 @@ function App() {
 
       {/* FINAL CTA */}
       <section className="final-cta">
-        <h2>Une heure pour vous.</h2>
-        <p>Réservez-la.</p>
+        <h2>One hour for you.</h2>
+        <p>Book it.</p>
         <a
           href={waLink}
           className="btn btn-light"
           target="_blank"
           rel="noreferrer"
         >
-          Réserver maintenant
+          Book now
         </a>
       </section>
 
@@ -301,7 +298,7 @@ function App() {
         <div className="footer-brand">
           DanceSoul<span>Therapy</span>
         </div>
-        <p>Danse thérapeutique à Koh Samui</p>
+        <p>Dance therapy in Koh Samui</p>
         <p className="footer-loc">
           Lamai · Koh 33 Stadium&nbsp;&nbsp;|&nbsp;&nbsp;Chaweng · Chor Ratchawat
           Gym
@@ -313,14 +310,14 @@ function App() {
           <a href={INSTAGRAM} target="_blank" rel="noreferrer">
             Instagram
           </a>
-          <a href="#top">Réserver</a>
+          <a href="#top">Book</a>
         </div>
-        <p className="signature">Bougez. Respirez. Libérez.</p>
+        <p className="signature">Move. Breathe. Release.</p>
       </footer>
 
-      {/* CTA FLOTTANT MOBILE */}
+      {/* MOBILE FLOATING CTA */}
       <a href={waLink} className="fab" target="_blank" rel="noreferrer">
-        Réserver
+        Book
       </a>
     </div>
   )
