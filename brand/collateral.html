@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>DanceSoulTherapy — Collateral</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+:root{--emerald:#10362B;--emerald-deep:#0C2A21;--navy:#0C1B2A;--ink:#0B0F0E;--gold:#C9A24B;--gold-soft:#D9B975;--amber:#E4A46A;--sand:#F3ECE1;--dim:rgba(243,236,225,.66)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,sans-serif;background:#d8cdbc;color:var(--ink);padding:44px 34px}
+h1.title{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:30px;margin-bottom:4px}
+.sub{color:#5f584c;font-size:13px;margin-bottom:30px}
+h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:19px;margin:34px 0 14px}
+.grid{display:flex;flex-wrap:wrap;gap:22px;align-items:flex-start}
+.wrap{display:flex;flex-direction:column;gap:8px}
+.lbl{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#5f584c}
+.serif{font-family:'Cormorant Garamond',Georgia,serif}
+.tag{text-transform:uppercase;letter-spacing:.4em;font-size:9px;color:var(--gold)}
+.eyebrow{text-transform:uppercase;letter-spacing:.3em;font-size:10px;color:var(--gold)}
+.wm{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;color:var(--sand)}
+.g{color:var(--gold)}
+.glow-top{position:absolute;inset:0;background:radial-gradient(80% 60% at 50% -8%,rgba(228,164,106,.34),transparent 55%);pointer-events:none}
+.rule{height:1px;background:var(--gold);opacity:.5}
+.pill{display:inline-block;background:var(--gold);color:var(--ink);font-weight:600;border-radius:100px;font-size:12px;padding:8px 18px}
+
+/* Business card 85x55mm ≈ 1.545 */
+.card{width:410px;height:265px;border-radius:12px;position:relative;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 20px 40px -20px rgba(0,0,0,.5)}
+.card.front{background:var(--emerald);align-items:center;justify-content:center;gap:14px}
+.card.back{background:var(--emerald-deep);padding:30px 34px;justify-content:space-between}
+.card .name{font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;color:var(--sand)}
+.card .role{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-top:2px}
+.contact{font-size:12.5px;color:var(--dim);line-height:1.9}
+.contact b{color:var(--sand);font-weight:500}
+
+/* IG post 1080 -> 320 */
+.post{width:320px;height:320px;border-radius:8px;position:relative;overflow:hidden;padding:30px;display:flex;flex-direction:column}
+.post.center{align-items:center;justify-content:center;text-align:center;gap:18px}
+.p-em{background:var(--emerald)} .p-navy{background:var(--navy)} .p-deep{background:var(--emerald-deep)}
+
+/* IG story 1080x1920 -> 216x384 */
+.story{width:216px;height:384px;border-radius:10px;position:relative;overflow:hidden;padding:26px;display:flex;flex-direction:column;align-items:center;text-align:center;background:linear-gradient(175deg,var(--emerald),var(--navy))}
+svg{display:block;overflow:visible}
+.footer{margin-top:46px;border-top:1px solid #c3b7a2;padding-top:14px;color:#5f584c;font-size:12px}
+</style></head>
+<body>
+<h1 class="title">DanceSoulTherapy — Brand Collateral</h1>
+<p class="sub">Business card + Instagram templates. One system: emerald ground, gold jewelry, Cormorant display, the “Rise” mark. Placeholder name/quotes marked for swap.</p>
+
+<!-- helper mark: define reusable via symbol -->
+<svg width="0" height="0" style="position:absolute"><symbol id="rise" viewBox="0 0 100 78"><g fill="none" stroke="var(--gold)" stroke-width="4" stroke-linecap="round"><path d="M16 66 A34 34 0 0 1 84 66"/><line x1="20" y1="66" x2="80" y2="66"/><path d="M37 66 A13 13 0 0 1 63 66"/><line x1="50" y1="49" x2="50" y2="41"/><line x1="39" y1="52" x2="34.5" y2="46.5"/><line x1="61" y1="52" x2="65.5" y2="46.5"/></g></symbol></svg>
+
+<h2>Business card · front & back</h2>
+<div class="grid">
+  <div class="wrap">
+    <div class="card front">
+      <div class="glow-top"></div>
+      <svg width="52" height="41"><use href="#rise"/></svg>
+      <div class="wm" style="font-size:24px">Dance<span class="g">Soul</span>Therapy</div>
+      <div class="tag">Awaken · Express · Heal</div>
+    </div>
+    <span class="lbl">Front</span>
+  </div>
+  <div class="wrap">
+    <div class="card back">
+      <svg width="34" height="27"><use href="#rise"/></svg>
+      <div>
+        <div class="name">Your Name</div>
+        <div class="role">Founder · Practitioner</div>
+      </div>
+      <div class="rule" style="width:60px"></div>
+      <div class="contact">
+        <b>+66 81 473 4649</b> · WhatsApp<br>
+        instagram.com/<b>dancesoultherapy</b><br>
+        Lamai · Chaweng — Koh Samui, Thailand
+      </div>
+    </div>
+    <span class="lbl">Back</span>
+  </div>
+</div>
+
+<h2>Instagram · post templates (1080 × 1080)</h2>
+<div class="grid">
+  <div class="wrap">
+    <div class="post p-em center">
+      <div class="glow-top"></div>
+      <svg width="40" height="31"><use href="#rise"/></svg>
+      <div class="serif" style="font-size:34px;color:var(--sand);line-height:1.1">Move what<br>you carry.</div>
+      <div class="tag" style="position:absolute;bottom:26px;left:0;right:0">Awaken · Express · Heal</div>
+    </div>
+    <span class="lbl">A · Statement / quote</span>
+  </div>
+  <div class="wrap">
+    <div class="post p-navy">
+      <div class="glow-top"></div>
+      <div class="eyebrow">The concept</div>
+      <div class="serif" style="font-size:30px;color:var(--sand);line-height:1.12;margin-top:12px">This isn’t a<br>dance class.</div>
+      <p style="color:var(--dim);font-size:12.5px;margin-top:14px;max-width:24ch">It’s a practice where movement and breath let what you carry leave.</p>
+      <svg width="30" height="23" style="position:absolute;bottom:26px;left:30px"><use href="#rise"/></svg>
+    </div>
+    <span class="lbl">B · Concept / education</span>
+  </div>
+  <div class="wrap">
+    <div class="post p-deep">
+      <div class="eyebrow">Group class</div>
+      <div class="serif" style="font-size:30px;color:var(--sand);margin-top:12px">Find your<br>format.</div>
+      <div style="margin-top:auto">
+        <div class="serif g" style="font-size:22px">from 400 THB</div>
+        <div style="color:var(--dim);font-size:12px;margin:4px 0 14px">Lamai · Chaweng · small groups</div>
+        <span class="pill">Book — link in bio</span>
+      </div>
+    </div>
+    <span class="lbl">C · Offer / booking</span>
+  </div>
+
+  <div class="wrap">
+    <div class="story">
+      <div class="glow-top"></div>
+      <svg width="42" height="33" style="margin-top:8px"><use href="#rise"/></svg>
+      <div class="serif" style="font-size:27px;color:var(--sand);line-height:1.14;margin-top:auto">One hour to<br>come back to<br>yourself.</div>
+      <div style="margin-top:auto;display:flex;flex-direction:column;align-items:center;gap:12px">
+        <span class="pill">Book — link in bio</span>
+        <div class="tag">Awaken · Express · Heal</div>
+      </div>
+    </div>
+    <span class="lbl">Story (1080 × 1920)</span>
+  </div>
+</div>
+
+<div class="footer">Brand collateral · draft templates for approval. On sign-off, exported as reusable Canva/Figma templates + print-ready card (with bleed).</div>
+</body></html>
