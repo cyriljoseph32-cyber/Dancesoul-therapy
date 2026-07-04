@@ -1,19 +1,5 @@
 import Link from 'next/link'
-import { wa, faqs } from '@/lib/site'
-
-const arc: [string, string, string][] = [
-  ['01', 'Arrive', 'Land, settle, breathe.'],
-  ['02', 'Awaken', 'Wake the body, sync breath.'],
-  ['03', 'Express', 'Free movement — the release.'],
-  ['04', 'Integrate', 'Return. Carry the calm out.'],
-]
-
-const practice: [string, string][] = [
-  ['Movement', 'free, intuitive, no choreography'],
-  ['Breath', 'the thread linking gesture to emotion'],
-  ['Expression', 'the body says what words won’t'],
-  ['Release', 'tension leaves, clarity returns'],
-]
+import { wa, outcomes, pillarsHome, processSteps, held } from '@/lib/site'
 
 const experiences: [string, string, string, string, string][] = [
   ['01', 'Group classes', 'Six evenings a week in Lamai and Chaweng. Ten people at most.', 'from 400 THB', '/group'],
@@ -26,7 +12,7 @@ const experiences: [string, string, string, string, string][] = [
 export default function Home() {
   return (
     <>
-      {/* HERO — asymmetric, left-anchored */}
+      {/* 1 · HERO — promise */}
       <section className="hero" aria-label="Introduction">
         <div className="hero-grid grid12 gutter" style={{ padding: 0, width: '100%' }}>
           <div style={{ gridColumn: '1 / span 8' }} data-reveal>
@@ -59,12 +45,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* THE ARC — editorial index strip */}
-      <section className="arc-strip tight" aria-label="The DanceSoul arc">
+      {/* 2 · OUTCOMES STRIP — honest facts */}
+      <section className="arc-strip tight" aria-label="What to expect">
         <div className="grid12">
-          {arc.map(([no, t, d]) => (
-            <div key={no} className="arc-item" data-reveal>
-              <span className="idx">{no}</span>
+          {outcomes.map(([t, d]) => (
+            <div key={t} className="arc-item" data-reveal>
               <span className="t">{t}</span>
               <span className="d">{d}</span>
             </div>
@@ -72,43 +57,49 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PRACTICE — asymmetric split, overlapping panel */}
-      <section className="practice" id="concept">
-        <div className="grid12">
-          <div className="practice-copy" data-reveal>
-            <p className="eyebrow">The practice</p>
-            <h2>This isn’t a dance class.</h2>
-            <p className="lead" style={{ marginTop: '1.4rem' }}>
-              It’s a practice where free movement and breath let what you carry
-              rise up and leave — stress, tension, held-back emotion. No level,
-              no eyes on you.
-            </p>
-            <div className="plist">
-              {practice.map(([t, d], i) => (
-                <div key={t} className="plist-row">
-                  <span className="idx">{String(i + 1).padStart(2, '0')}</span>
-                  <span>
-                    <span className="t">{t}</span>
-                    <span className="d"> — {d}</span>
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="practice-panel" data-reveal>
-            <p className="q">
-              “Talking reaches the mind. It rarely reaches the body.”
-            </p>
-            <div className="a">
-              <Link href="/what-is" className="btn btn-ghost btn-sm">
-                What is movement therapy
-              </Link>
-            </div>
-          </div>
+      {/* 3 · THREE PILLARS — premise, method, place */}
+      <section className="pillars-home" id="concept">
+        <div className="section-head" data-reveal>
+          <p className="eyebrow">Why it works</p>
+          <h2>Not a dance class. A practice.</h2>
+        </div>
+        <div className="ph-grid">
+          {pillarsHome.map((p, i) => (
+            <Link
+              key={p.no}
+              href={p.href}
+              className={`ph-block ${i === 0 ? 'wide' : ''}`}
+              data-reveal
+            >
+              <span className="idx">{p.no}</span>
+              <h3>{p.t}</h3>
+              <p>{p.d}</p>
+              <span className="ph-more">Read more</span>
+            </Link>
+          ))}
         </div>
       </section>
 
-      {/* EXPERIENCES — index table, not cards */}
+      {/* 4 · PROCESS — diagonal four steps */}
+      <section className="process" aria-label="How it works">
+        <div className="section-head" data-reveal>
+          <p className="eyebrow">How it begins</p>
+          <h2>Four steps, no forms.</h2>
+        </div>
+        <ol className="steps">
+          {processSteps.map(([no, t, d], i) => (
+            <li key={no} className="step" style={{ ['--i' as string]: i }} data-reveal>
+              <span className="idx">{no}</span>
+              <div>
+                <h3>{t}</h3>
+                <p>{d}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      {/* EXPERIENCES — the offer (index table) */}
       <section className="offers" id="offers">
         <div className="section-head" data-reveal>
           <p className="eyebrow">Experiences</p>
@@ -134,29 +125,7 @@ export default function Home() {
         </blockquote>
       </section>
 
-      {/* HOTELS — offset block */}
-      <section className="hotels" id="hotels">
-        <div className="grid12">
-          <div className="hotels-text" data-reveal>
-            <p className="eyebrow">Hotels · Resorts · Retreats</p>
-            <h2>A signature experience for your venue.</h2>
-            <p>
-              Workshops and retreat modules designed for wellness guests,
-              hosted on-site across Koh Samui, delivered turnkey.
-            </p>
-            <a
-              href={wa('Hi, I represent a hotel/resort and would like to discuss a partnership.')}
-              className="btn"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Partner with us
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* TESTIMONIALS — one voice leads */}
+      {/* 5 · TESTIMONIALS — proof */}
       <section className="testimonials">
         <div className="grid12">
           <div className="quote-lead" data-reveal>
@@ -182,19 +151,48 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FAQ — condensed */}
-      <section className="faq" id="faq">
-        <div className="section-head" data-reveal>
-          <p className="eyebrow">Before you come</p>
-          <h2>The honest answers.</h2>
-        </div>
-        <div className="faq-list" data-reveal>
-          {faqs.map(([q, a]) => (
-            <details key={q}>
-              <summary>{q}</summary>
-              <p>{a}</p>
-            </details>
-          ))}
+      {/* 6 · TRUST / CREDIBILITY — held safely */}
+      <section className="credibility" id="hotels">
+        <div className="grid12">
+          <div className="cred-left" data-reveal>
+            <p className="eyebrow">Held safely</p>
+            <h2>The room is built for trust.</h2>
+            <div className="cred-list">
+              {held.map(([t, d]) => (
+                <div key={t} className="cred-item">
+                  <h3>{t}</h3>
+                  <p>{d}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="cred-right" data-reveal>
+            <div className="cred-block">
+              <h4>Where</h4>
+              <p>
+                Lamai — Koh 33 Stadium
+                <br />
+                Chaweng — Chor Ratchawat Gym
+              </p>
+              <Link href="/contact" className="ph-more">
+                Maps & contact
+              </Link>
+            </div>
+            <div className="cred-block">
+              <h4>With hotels & resorts</h4>
+              <p>Signature workshops hosted on-site across Koh Samui.</p>
+              <Link href="/retreats" className="ph-more">
+                Partnerships
+              </Link>
+            </div>
+            <div className="cred-block">
+              <h4>Questions first?</h4>
+              <p>The honest answers, before you come.</p>
+              <Link href="/faq" className="ph-more">
+                Read the FAQ
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 

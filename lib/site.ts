@@ -108,3 +108,47 @@ export const schedule: [string, string, string][] = [
   ['Friday', '17:30', 'Lamai · Koh 33 Stadium'],
   ['Saturday', '10:00 (kids) · 17:00', 'Chaweng · Chor Ratchawat Gym'],
 ]
+
+// --- Homepage narrative spine (outcomes / pillars / process / credibility) ---
+
+// Real, honest facts — no invented percentages.
+export const outcomes: [string, string][] = [
+  ['One hour', 'is enough to feel lighter'],
+  ['Zero skill', 'required — no choreography, no level'],
+  ['Ten people', 'at most, in every room'],
+  ['Six evenings', 'a week — Lamai & Chaweng'],
+]
+
+export const pillarsHome: { no: string; t: string; d: string; href: string }[] = [
+  {
+    no: '01',
+    t: 'The body listens',
+    d: 'Stress, grief and tension live in the body as held patterns — a tight chest, a guarded posture, a shallow breath. Talking reaches the mind; movement reaches the rest. That is the premise, and the practice.',
+    href: '/what-is',
+  },
+  {
+    no: '02',
+    t: 'The arc',
+    d: 'Every session follows the DanceSoul Method: arrive, awaken, express, release, integrate. A repeatable structure that makes each hour safe — and each release possible.',
+    href: '/what-is',
+  },
+  {
+    no: '03',
+    t: 'The sanctuary',
+    d: 'Koh Samui, small rooms, low light, no mirrors. Ten people at most, held by Hannah. A place built so your body can say everything.',
+    href: '/about',
+  },
+]
+
+export const processSteps: [string, string, string][] = [
+  ['01', 'Reach out', 'One WhatsApp message. A human answers, usually within the hour.'],
+  ['02', 'Arrive', 'Comfortable clothes, water, nothing else. The room does the rest.'],
+  ['03', 'Move & release', 'Guided by breath and music through the arc — no eyes on you, nothing to get right.'],
+  ['04', 'Return', 'Leave lighter. Come back weekly, go private, or go deeper on a retreat.'],
+]
+
+export const held: [string, string][] = [
+  ['Opt out of anything', 'Every invitation is optional. Pausing is part of the practice.'],
+  ['No judgement, no mirrors', 'Nobody watches, nobody corrects. Emotion is welcome and unremarked.'],
+  ['Within scope', 'A wellbeing practice, not medical care — with clear referral when someone needs more.'],
+]
