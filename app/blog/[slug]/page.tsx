@@ -50,7 +50,7 @@ export default async function PostPage({
       />
       <section className="page-hero">
         <p className="eyebrow">{post.category}</p>
-        <h1 style={{ maxWidth: '22ch', margin: '0 auto 1.2rem' }}>{post.title}</h1>
+        <h1 style={{ maxWidth: '20ch' }}>{post.title}</h1>
         <p>{new Date(post.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
       </section>
 

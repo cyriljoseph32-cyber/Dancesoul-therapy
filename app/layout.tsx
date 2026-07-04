@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import RevealInit from '@/components/RevealInit'
 import { wa, SITE_URL, WHATSAPP, INSTAGRAM } from '@/lib/site'
 
 export const metadata: Metadata = {
@@ -59,7 +60,7 @@ export default function RootLayout({
           crossOrigin=""
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap"
           rel="stylesheet"
         />
         <script
@@ -68,6 +69,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <RevealInit />
         <Header />
         <main>{children}</main>
         <Footer />
