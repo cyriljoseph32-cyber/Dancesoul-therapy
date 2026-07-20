@@ -42,3 +42,13 @@ Authored light/shadow compositions (foliage SVG, film grain) hold the photograph
 ## Open TODOs (owner: Hannah)
 
 Cal.com handle → `CAL_LINK` in `lib/site.ts` · real schedule times · bio/portrait/gallery photos · real reviews · domain `dancesoultherapy.com` in Vercel.
+
+## Central memory
+
+Cyril's cross-project memory lives in the `cyriljoseph32-cyber/Coconut-Samui-Rugby-Academy`
+repo under `brain/memoire/` — this project's sheet is
+`brain/memoire/projets/dancesoul-therapy.md`. When starting a task, consult the sheet if
+reachable (sibling checkout at `/home/user/Coconut-Samui-Rugby-Academy/` or via GitHub).
+After a significant change here, update the sheet + `brain/memoire/journal.md`, or flag it
+to Cyril so the `memory` agent does it. Never copy confidential IP
+(`THE_DANCESOUL_METHOD.md`) into the memory — reference it only.
