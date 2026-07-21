@@ -43,6 +43,19 @@ Authored light/shadow compositions (foliage SVG, film grain) hold the photograph
 
 Cal.com handle → `CAL_LINK` in `lib/site.ts` · real schedule times · bio/portrait/gallery photos · real reviews · domain `dancesoultherapy.com` in Vercel.
 
+## Agent team
+
+| Agent | Role | Shortcut |
+|---|---|---|
+| `webmaster-dst` (`.claude/agents/webmaster-dst.md`) | Site: strict design system + full pre-ship verification workflow | `/dst-site` |
+| `contenu-dst` (`.claude/agents/contenu-dst.md`) | Brand copy, articles, posts — wellness-claim governance, drafts only | `/dst-contenu` |
+| `lancement-dst` (`.claude/agents/lancement-dst.md`) | Launch checklist (Cal.com, photos, reviews, domain), coordinates the other two | `/dst-lancement` |
+
+Shared rules: reply to Cyril in French (site content is English); drafts only — Hannah/Cyril
+validate everything; never a medical claim; never copy `THE_DANCESOUL_METHOD.md` anywhere;
+each agent reads this project's memory sheet before acting and updates the central memory
+after significant work.
+
 ## Central memory
 
 Cyril's cross-project memory lives in the `cyriljoseph32-cyber/Coconut-Samui-Rugby-Academy`
