@@ -1,25 +1,25 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
-import { wa, schedule } from '@/lib/site'
+import { wa, schedule, privateFormats, prices } from '@/lib/site'
 
 export const metadata: Metadata = {
-  title: 'Group Movement Therapy Classes — Lamai & Chaweng',
+  title: 'Sessions — Group Classes & Private Movement Therapy',
   description:
-    'Small-group movement therapy classes in Koh Samui, all levels, from 400 THB. Six sessions a week in Lamai and Chaweng, groups of 10 max.',
+    'Small-group movement therapy in Koh Samui, all levels, from 400 THB — six evenings a week in Lamai and Chaweng. Private sessions in studio from 800 THB, or at your villa from 1,000 THB.',
 }
 
-export default function Group() {
+export default function Experiences() {
   return (
     <>
       <section className="page-hero">
         <h1>Group classes.</h1>
         <p>
           Six sessions a week in Lamai and Chaweng. Small groups, all levels —
-          from 400 THB.
+          {' '}
+          {prices.group}.
         </p>
       </section>
 
-      <section className="concept">
+      <section className="concept" data-reveal>
         <div className="section-head">
           <p className="eyebrow">How it works</p>
           <h2>Ten people, one hour, no level.</h2>
@@ -32,7 +32,7 @@ export default function Group() {
         </p>
       </section>
 
-      <section className="offers">
+      <section className="offers" data-reveal>
         <div className="section-head">
           <p className="eyebrow">Weekly schedule</p>
           <h2>Find your evening.</h2>
@@ -47,8 +47,33 @@ export default function Group() {
           ))}
         </div>
         <p className="fineprint">
-          Drop-in 400 THB · kids class Saturday morning · confirm your spot on
-          WhatsApp — places are limited to 10.
+          Drop-in {prices.groupDropIn} · kids class Saturday morning · confirm
+          your spot on WhatsApp — places are limited to 10.
+        </p>
+      </section>
+
+      <section className="concept" id="private" data-reveal>
+        <div className="section-head">
+          <p className="eyebrow">Two formats</p>
+          <h2>Private: studio, or your own space.</h2>
+        </div>
+        <p className="lead">
+          A transition, a block, a season of burnout — or simply the wish for
+          undivided attention. In private, the arc adapts to you: deeper where
+          you need depth, slower where you need time.
+        </p>
+        <div className="offer-grid two" style={{ marginTop: '2.4rem' }}>
+          {privateFormats.map(([t, d, p]) => (
+            <article key={t} className="offer">
+              <h3>{t}</h3>
+              <p>{d}</p>
+              <span className="price">{p}</span>
+            </article>
+          ))}
+        </div>
+        <p className="fineprint">
+          Sessions with Hannah, by appointment · packs of 5 available · couples
+          and duo sessions on request.
         </p>
       </section>
 
@@ -63,11 +88,6 @@ export default function Group() {
         >
           Reserve on WhatsApp
         </a>
-        <p style={{ marginTop: '1.5rem' }}>
-          <Link href="/private" className="btn btn-ghost">
-            Prefer a private session?
-          </Link>
-        </p>
       </section>
     </>
   )

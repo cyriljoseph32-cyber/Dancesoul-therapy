@@ -4,23 +4,31 @@
    ============================================================ */
 
 :root {
-  /* surfaces — dusk air, not "dark mode" */
-  --night: oklch(16% 0.02 230);        /* deep navy-ink base */
-  --canopy: oklch(24% 0.04 170);       /* emerald surface */
-  --canopy-2: oklch(20% 0.033 180);    /* deeper emerald */
-  --ink: oklch(13% 0.012 200);         /* near-black */
+  /* surfaces — tuned to the brand hexes (see brand/TYPE_AND_COLOR.md) */
+  --night: oklch(21.7% 0.036 250);     /* #0C1B2A deep navy — base */
+  --canopy: oklch(30.2% 0.048 171);    /* #10362B jungle emerald */
+  --canopy-2: oklch(25.9% 0.040 170);  /* #0C2A21 deep emerald */
+  --ink: oklch(16.4% 0.007 179);       /* #0B0F0E near-black */
   /* text */
-  --mist: oklch(93% 0.013 90);         /* sand-mist */
-  --mist-70: oklch(93% 0.013 90 / 0.72);
-  --mist-45: oklch(93% 0.013 90 / 0.48);
+  --mist: oklch(94.6% 0.016 79);       /* #F3ECE1 natural sand */
+  --mist-70: oklch(94.6% 0.016 79 / 0.72);
+  /* wireframes specify 0.45, but that lands secondary text at 3.5–4.0:1 on our
+     grounds. 0.55 is the lowest value clearing WCAG AA 4.5:1 everywhere. */
+  --mist-45: oklch(94.6% 0.016 79 / 0.55);
   /* accent — jewelry only */
-  --gold: oklch(74% 0.104 88);
-  --gold-deep: oklch(65% 0.105 82);
-  --ember: oklch(76% 0.09 65);
+  --gold: oklch(73.1% 0.115 85);       /* #C9A24B warm gold */
+  --gold-soft: oklch(79.9% 0.094 85);  /* #D9B975 soft gold — hover, lighter than --gold */
+  --gold-deep: oklch(65% 0.105 82);    /* deeper gold — pressed/active only */
+  --ember: oklch(76.8% 0.106 62);      /* #E4A46A sunrise amber — gradients & glow */
+  /* surface tints — --mist at low alpha */
+  --surface-1: oklch(94.6% 0.016 79 / 0.03);
+  --surface-2: oklch(94.6% 0.016 79 / 0.055);
+  --surface-3: oklch(94.6% 0.016 79 / 0.025);
   /* lines & shadow */
   --hairline: oklch(85% 0.05 90 / 0.16);
   --hairline-soft: oklch(85% 0.05 90 / 0.09);
-  --shadow: 0 32px 64px -32px oklch(10% 0.02 220 / 0.8);
+  --shadow: 0 32px 64px -32px oklch(21.7% 0.036 250 / 0.8);
+  --glass: oklch(21.7% 0.036 250 / 0.78);  /* header — --night at 78% */
   /* type */
   --serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   --sans: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -31,7 +39,6 @@
   --sand: var(--mist);
   --sand-dim: var(--mist-70);
   --line: var(--hairline);
-  --gold-soft: var(--gold-deep);
   --amber: var(--ember);
 }
 
@@ -118,31 +125,39 @@ h2 { font-size: clamp(2.1rem, 4.6vw, 3.7rem); color: var(--mist); }
   background: var(--gold);
   color: var(--ink);
   padding: 1.02rem 2.3rem;
+  border: 1px solid transparent; /* keeps .btn and .btn-ghost the same height */
   border-radius: 2px;
   font-size: 0.74rem;
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
   white-space: nowrap;
 }
-.btn:hover { background: var(--gold-deep); }
+.btn:hover { background: var(--gold-soft); }
+.btn:active { background: var(--gold-deep); }
+.btn:disabled, .btn[aria-disabled='true'] {
+  opacity: 0.45;
+  pointer-events: none;
+  cursor: default;
+}
+.btn[aria-busy='true'] { opacity: 0.7; pointer-events: none; }
 .btn-sm { padding: 0.62rem 1.4rem; font-size: 0.66rem; }
 .btn-ghost {
   background: transparent;
   color: var(--mist);
-  border: 1px solid var(--hairline);
+  border-color: var(--hairline);
 }
 .btn-ghost:hover { border-color: var(--gold); color: var(--gold); background: transparent; }
 .btn-light { background: var(--mist); color: var(--ink); }
-.btn-light:hover { background: #fff; }
+.btn-light:hover { background: oklch(98% 0.008 79); }
 
 /* ---------- header ---------- */
 .header {
   position: sticky; top: 0; z-index: 50;
   display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;
   padding: 1rem clamp(1.4rem, 6vw, 7.5rem);
-  background: oklch(16% 0.02 230 / 0.78);
+  background: var(--glass);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--hairline-soft);
 }
@@ -158,7 +173,7 @@ h2 { font-size: clamp(2.1rem, 4.6vw, 3.7rem); color: var(--mist); }
   overflow: hidden;
   background:
     radial-gradient(75% 90% at 82% 4%, oklch(70% 0.1 70 / 0.34) 0%, oklch(70% 0.1 80 / 0.08) 38%, transparent 62%),
-    linear-gradient(168deg, var(--canopy) 0%, var(--night) 78%);
+    linear-gradient(168deg, var(--canopy) 0%, var(--ember) 78%); /* amber band — approved exception, see CLAUDE.md */
   padding-bottom: clamp(4rem, 9vh, 7rem);
 }
 /* light through foliage — authored shadow layer */
@@ -195,7 +210,7 @@ h2 { font-size: clamp(2.1rem, 4.6vw, 3.7rem); color: var(--mist); }
   background: var(--ink);
   border-top: 1px solid var(--hairline-soft);
   border-bottom: 1px solid var(--hairline-soft);
-  padding: clamp(2.6rem, 5vw, 4rem) 0;
+  padding: clamp(2.6rem, 5vw, 4rem) clamp(1.4rem, 6vw, 7.5rem);
 }
 .arc-strip .grid12 { align-items: baseline; }
 .arc-item { grid-column: span 3; display: flex; flex-direction: column; gap: 0.3rem; }
@@ -239,7 +254,7 @@ h2 { font-size: clamp(2.1rem, 4.6vw, 3.7rem); color: var(--mist); }
   border-bottom: 1px solid var(--hairline);
   transition: background 0.3s ease, padding-left 0.3s ease;
 }
-.index-row:hover { background: oklch(93% 0.013 90 / 0.03); padding-left: 1rem; }
+.index-row:hover { background: var(--surface-1); padding-left: 1rem; }
 .index-row .no { font-family: var(--serif); font-style: italic; color: var(--mist-45); }
 .index-row .name { font-family: var(--serif); font-size: clamp(1.5rem, 2.6vw, 2.1rem); color: var(--mist); line-height: 1.1; }
 .index-row .desc { font-size: 0.88rem; color: var(--mist-45); max-width: 46ch; }
@@ -288,6 +303,8 @@ cite { font-style: normal; font-size: 0.68rem; letter-spacing: 0.2em; text-trans
 /* ---------- generic content sections (subpages) ---------- */
 .concept, .about { background: var(--canopy-2); }
 .pillars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 3.2rem; }
+/* the margin assumes a .section-head above; drop it when there isn't one */
+.pillars:first-child { margin-top: 0; }
 .pillars.three { grid-template-columns: repeat(3, 1fr); }
 .pillar { border-top: 1px solid var(--hairline); padding-top: 1.1rem; }
 .pillar h3 { font-size: 1.45rem; margin-bottom: 0.4rem; color: var(--mist); }
@@ -296,14 +313,14 @@ cite { font-style: normal; font-size: 0.68rem; letter-spacing: 0.2em; text-trans
 .offer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
 .offer-grid.two { grid-template-columns: repeat(2, 1fr); max-width: 62rem; }
 .offer {
-  background: oklch(93% 0.013 90 / 0.03);
+  background: var(--surface-1);
   border: 1px solid var(--hairline-soft);
   border-radius: 2px;
   padding: 2rem 1.8rem;
   display: flex; flex-direction: column;
   transition: background 0.3s ease, border-color 0.3s ease;
 }
-.offer:hover { border-color: var(--hairline); background: oklch(93% 0.013 90 / 0.055); }
+.offer:hover { border-color: var(--hairline); background: var(--surface-2); }
 .offer h3 { font-size: 1.65rem; margin-bottom: 0.7rem; color: var(--mist); }
 .offer p { color: var(--mist-45); font-size: 0.9rem; margin-bottom: 1.4rem; flex: 1; }
 .offer.link { cursor: pointer; }
@@ -339,7 +356,7 @@ details p { color: var(--mist-45); margin-top: 0.9rem; max-width: 62ch; }
 .final-cta {
   background:
     radial-gradient(70% 100% at 88% 0%, oklch(72% 0.1 75 / 0.26), transparent 58%),
-    linear-gradient(165deg, var(--canopy) 0%, var(--night) 85%);
+    linear-gradient(165deg, var(--canopy) 0%, var(--ember) 85%); /* amber band — approved exception, see CLAUDE.md */
   display: flex; flex-direction: column; align-items: flex-start; gap: 0.6rem;
   border-top: 1px solid var(--hairline-soft);
 }
@@ -380,7 +397,7 @@ details p { color: var(--mist-45); margin-top: 0.9rem; max-width: 62ch; }
   padding: clamp(7rem, 14vw, 10rem) clamp(1.4rem, 6vw, 7.5rem) clamp(3.5rem, 7vw, 6rem);
   background:
     radial-gradient(70% 80% at 85% -10%, oklch(72% 0.1 75 / 0.2), transparent 55%),
-    linear-gradient(168deg, var(--canopy) 0%, var(--night) 88%);
+    linear-gradient(168deg, var(--canopy) 0%, var(--ember) 88%); /* amber band — approved exception, see CLAUDE.md */
   text-align: left;
 }
 .page-hero h1 { font-size: clamp(2.8rem, 7.4vw, 5.6rem); color: var(--mist); margin-bottom: 1.4rem; max-width: 16ch; }
@@ -390,11 +407,71 @@ details p { color: var(--mist-45); margin-top: 0.9rem; max-width: 62ch; }
 /* schedule */
 .sched { max-width: 48rem; border-top: 1px solid var(--hairline); }
 .sched-row { display: grid; grid-template-columns: 8rem 10rem 1fr; gap: 1rem; padding: 1.1rem 0.3rem; border-bottom: 1px solid var(--hairline); align-items: baseline; transition: background 0.3s; }
-.sched-row:hover { background: oklch(93% 0.013 90 / 0.03); }
+.sched-row:hover { background: var(--surface-1); }
 .sched-day { font-family: var(--serif); font-size: 1.3rem; color: var(--mist); }
 .sched-time { color: var(--gold); font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; }
 .sched-loc { color: var(--mist-45); font-size: 0.9rem; }
 .fineprint { margin-top: 2rem; font-size: 0.84rem; color: var(--mist-45); max-width: 60ch; }
+
+/* ---------- tap rows — booking intent ----------
+   Deliberately NOT .offer cards: booking rows must not borrow the gold
+   serif .price token, or a WhatsApp link reads as a price. */
+.tap-list { border-top: 1px solid var(--hairline); max-width: 56rem; }
+.tap-row {
+  display: flex; justify-content: space-between; align-items: center; gap: 1.5rem;
+  padding: 1.4rem 0.4rem;
+  border-bottom: 1px solid var(--hairline);
+  transition: background 0.3s ease, padding-left 0.3s ease;
+}
+.tap-row:hover { background: var(--surface-1); padding-left: 1rem; }
+.tap-row .label {
+  font-family: var(--serif);
+  font-size: clamp(1.25rem, 2.4vw, 1.6rem);
+  color: var(--mist);
+  line-height: 1.1;
+}
+/* action label — gold, uppercase. Distinct from .price so a link never
+   reads as a cost. Used by .tap-row and by non-pricing .offer cards. */
+.go {
+  font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--gold); white-space: nowrap;
+}
+.offer .go { margin-top: auto; }
+
+/* ---------- portrait frame — 4:5, hairline, holds the slot until the shoot ---------- */
+.portrait {
+  aspect-ratio: 4 / 5;
+  border: 1px solid var(--hairline);
+  border-radius: 2px;
+  background: repeating-linear-gradient(
+    135deg,
+    var(--surface-3) 0 12px,
+    oklch(94.6% 0.016 79 / 0.01) 12px 24px
+  );
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+  margin: 0;
+}
+.portrait img { width: 100%; height: 100%; object-fit: cover; }
+.portrait figcaption {
+  font-family: var(--sans); font-size: 0.75rem; line-height: 1.5;
+  color: var(--mist-45); text-align: center; padding: 1rem;
+}
+.about-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 3rem; align-items: start; }
+
+/* keyboard parity for surfaces that only had :hover */
+.index-row:focus-visible, .tap-row:focus-visible, .offer.link:focus-visible {
+  background: var(--surface-1);
+}
+
+@media (max-width: 860px) {
+  .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .portrait { max-width: 22rem; }
+}
+@media (max-width: 620px) {
+  .tap-row .go { font-size: 0; }
+  .tap-row .go::after { content: '→'; font-size: 0.9rem; }
+}
 
 /* gallery — atmospheric frames until the shoot */
 .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
@@ -460,7 +537,7 @@ details p { color: var(--mist-45); margin-top: 0.9rem; max-width: 62ch; }
   border-radius: 2px;
   padding: clamp(1.8rem, 3vw, 2.6rem);
   display: flex; flex-direction: column; gap: 0.9rem;
-  background: oklch(93% 0.013 90 / 0.025);
+  background: var(--surface-3);
   transition: border-color 0.3s ease, background 0.3s ease;
 }
 .ph-block.wide {
@@ -469,9 +546,9 @@ details p { color: var(--mist-45); margin-top: 0.9rem; max-width: 62ch; }
   min-height: clamp(20rem, 34vw, 27rem);
   background:
     radial-gradient(110% 90% at 85% 0%, oklch(72% 0.1 75 / 0.2), transparent 55%),
-    oklch(93% 0.013 90 / 0.02);
+    var(--surface-3);
 }
-.ph-block:hover { border-color: var(--hairline); background: oklch(93% 0.013 90 / 0.05); }
+.ph-block:hover { border-color: var(--hairline); background: var(--surface-2); }
 .ph-block h3 { font-size: clamp(1.6rem, 2.6vw, 2.2rem); color: var(--mist); }
 .ph-block p { font-size: 0.92rem; color: var(--mist-45); max-width: 52ch; }
 .ph-block.wide p { font-size: 1rem; color: var(--mist-70); }

@@ -1,13 +1,14 @@
 import Link from 'next/link'
-import { wa, outcomes, pillarsHome, processSteps, held } from '@/lib/site'
-
-const experiences: [string, string, string, string, string][] = [
-  ['01', 'Group classes', 'Six evenings a week in Lamai and Chaweng. Ten people at most.', 'from 400 THB', '/group'],
-  ['02', 'Private sessions', 'In studio, at your villa, on the beach. One hour, entirely yours.', 'from 800 THB', '/private'],
-  ['03', 'Outdoor sessions', 'Movement facing the sea, in the last light of the day.', 'from 500 THB', '/booking'],
-  ['04', 'Corporate', 'A physical reset for teams — on-site, beginner-safe.', 'on request', '/corporate'],
-  ['05', 'Retreats', 'Day immersions and three-day journeys between jungle and sea.', 'from 6,000 THB', '/retreats'],
-]
+import {
+  wa,
+  outcomes,
+  pillarsHome,
+  processSteps,
+  held,
+  experiences,
+  testimonials,
+  locations,
+} from '@/lib/site'
 
 export default function Home() {
   return (
@@ -106,7 +107,7 @@ export default function Home() {
           <h2>Choose your way in.</h2>
         </div>
         <div className="index-table" data-reveal>
-          {experiences.map(([no, name, desc, tag, href]) => (
+          {experiences.map(({ no, name, desc, tag, href }) => (
             <Link key={no} href={href} className="index-row">
               <span className="no">{no}</span>
               <span className="name">{name}</span>
@@ -130,23 +131,18 @@ export default function Home() {
         <div className="grid12">
           <div className="quote-lead" data-reveal>
             <p className="eyebrow">After a session</p>
-            <p>
-              “I came in sceptical and left in tears — the good kind. A relief
-              I hadn’t felt in months.”
-            </p>
+            <p>“{testimonials[0][0]}”</p>
             <cite style={{ display: 'block', marginTop: '1.4rem' }}>
-              Camille — expat, Lamai
+              {testimonials[0][1]}
             </cite>
           </div>
           <div className="quote-side" data-reveal>
-            <blockquote>
-              <p>“Nothing like a dance class. I released tension I didn’t know I was carrying.”</p>
-              <cite>Marc — resident</cite>
-            </blockquote>
-            <blockquote>
-              <p>“Our guests still talk about it.”</p>
-              <cite>Resort manager — Chaweng</cite>
-            </blockquote>
+            {testimonials.slice(1).map(([quote, who]) => (
+              <blockquote key={who}>
+                <p>“{quote}”</p>
+                <cite>{who}</cite>
+              </blockquote>
+            ))}
           </div>
         </div>
       </section>
@@ -170,9 +166,12 @@ export default function Home() {
             <div className="cred-block">
               <h4>Where</h4>
               <p>
-                Lamai — Koh 33 Stadium
-                <br />
-                Chaweng — Chor Ratchawat Gym
+                {locations.map(({ area, venue }, i) => (
+                  <span key={area}>
+                    {i > 0 && <br />}
+                    {area} — {venue}
+                  </span>
+                ))}
               </p>
               <Link href="/contact" className="ph-more">
                 Maps & contact
@@ -183,13 +182,6 @@ export default function Home() {
               <p>Signature workshops hosted on-site across Koh Samui.</p>
               <Link href="/retreats" className="ph-more">
                 Partnerships
-              </Link>
-            </div>
-            <div className="cred-block">
-              <h4>Questions first?</h4>
-              <p>The honest answers, before you come.</p>
-              <Link href="/faq" className="ph-more">
-                Read the FAQ
               </Link>
             </div>
           </div>
