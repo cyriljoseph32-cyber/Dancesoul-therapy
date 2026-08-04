@@ -8,12 +8,12 @@ export const metadata: Metadata = {
     'How guided movement and breath release stored emotion — the DanceSoul Method explained. No level required, no choreography, no judgement.',
 }
 
-const arc: [string, string][] = [
-  ['1 · Arrive', 'Land, settle, breathe. Build a safe container.'],
-  ['2 · Awaken', 'Wake the body, sync breath to movement.'],
-  ['3 · Express', 'Free movement — the release. This is the heart of it.'],
-  ['4 · Release', 'Slow, soften, let go.'],
-  ['5 · Integrate', 'Return to stillness. Carry the calm out with you.'],
+const arc: [string, string, string][] = [
+  ['01', 'Arrive', 'Land, settle, breathe. Build a safe container.'],
+  ['02', 'Awaken', 'Wake the body, sync breath to movement.'],
+  ['03', 'Express', 'Free movement — the release. This is the heart of it.'],
+  ['04', 'Release', 'Slow, soften, let go.'],
+  ['05', 'Integrate', 'Return to stillness. Carry the calm out with you.'],
 ]
 
 export default function WhatIs() {
@@ -46,12 +46,16 @@ export default function WhatIs() {
           <p className="eyebrow">The DanceSoul Method™</p>
           <h2>Every session follows one arc.</h2>
         </div>
-        <div className="offer-grid">
-          {arc.map(([t, d]) => (
-            <article key={t} className="offer">
-              <h3>{t}</h3>
-              <p>{d}</p>
-            </article>
+        {/* An ordered arc — index rows keep the sequence readable.
+            A card grid reflowed to 3+2 and broke the read order. */}
+        <div className="index-table">
+          {arc.map(([no, name, desc]) => (
+            <div key={no} className="index-row">
+              <span className="no">{no}</span>
+              <span className="name">{name}</span>
+              <span className="desc">{desc}</span>
+              <span className="tag" />
+            </div>
           ))}
         </div>
       </section>

@@ -4,8 +4,8 @@ import { wa, INSTAGRAM } from '@/lib/site'
 
 const explore = [
   ['The practice', '/what-is'],
-  ['Group classes', '/group'],
-  ['Private sessions', '/private'],
+  ['Group classes', '/experiences'],
+  ['Private sessions', '/experiences#private'],
   ['Retreats', '/retreats'],
   ['Journal', '/blog'],
 ]

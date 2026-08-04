@@ -21,23 +21,34 @@ export default function About() {
         <p>The body heals what the mind can’t reach.</p>
       </section>
 
-      <section className="about">
-        <div className="section-head">
-          <p className="eyebrow">Founder</p>
-          <h2>Meet Hannah.</h2>
+      <section className="about" data-reveal>
+        <div className="about-grid">
+          {/* TODO: replace with Hannah's final bio + portrait */}
+          <figure className="portrait">
+            <figcaption>
+              Hannah — founder portrait
+              <br />
+              (final photo pending)
+            </figcaption>
+          </figure>
+          <div>
+            <div className="section-head">
+              <p className="eyebrow">Founder</p>
+              <h2>Meet Hannah.</h2>
+            </div>
+            <p className="lead">
+              Hannah founded DanceSoulTherapy in Koh Samui from a simple
+              conviction: our emotions live in the body, and movement is the way
+              back to them. After years exploring movement as a form of release,
+              she built a rare space on the island — where you dance not to
+              perform, but to set yourself free.
+            </p>
+            <p className="lead" style={{ marginTop: '1.4rem' }}>
+              Every session she leads is an encounter: safe, sincere, without
+              judgement. Here, your body has permission to say everything.
+            </p>
+          </div>
         </div>
-        <p className="lead">
-          Hannah founded DanceSoulTherapy in Koh Samui from a simple conviction:
-          our emotions live in the body, and movement is the way back to them.
-          After years exploring movement as a form of release, she built a rare
-          space on the island — where you dance not to perform, but to set
-          yourself free.
-        </p>
-        <p className="lead" style={{ marginTop: '1.4rem' }}>
-          Every session she leads is an encounter: safe, sincere, without
-          judgement. Here, your body has permission to say everything.
-        </p>
-        {/* TODO: replace with Hannah's final bio + portrait */}
       </section>
 
       <section className="offers">

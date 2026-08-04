@@ -20,6 +20,19 @@ Live site: Next.js on Vercel, deployed from `main`.
 - **Borders**: alpha hairlines. Shadows tone-matched (`--shadow`).
 - **Motion**: `data-reveal` + `RevealInit` (IntersectionObserver) — slow fades only; must honor `prefers-reduced-motion`.
 
+### Approved exceptions (do not "fix" these)
+
+- **Amber gradient bands.** `.hero`, `.page-hero` and `.final-cta` resolve to
+  `linear-gradient(… var(--canopy) → var(--ember))`, ending on Sunrise Amber `#E4A46A`.
+  This is a deliberate, signed-off departure from "gold is jewelry / never fields of gold"
+  and from the WCAG AA gate below: sand `#F3ECE1` on `#E4A46A` measures **1.82:1** (navy
+  `#0C1B2A` would be 14.84:1). It matches the approved high-fidelity wireframes.
+  Contrast-check new work against the *other* surfaces; this pair is a known, accepted
+  failure and is the only one. Revisit only in a dedicated accessibility pass.
+- **`--mist-45` is 0.55 alpha, not the 0.45 the wireframes show.** At 0.45 secondary text
+  lands at 3.5–4.0:1 on our grounds; 0.55 is the lowest value clearing AA 4.5:1 on all four
+  dark surfaces. Do not lower it back for pixel-fidelity.
+
 ### Banned (the AI/template look)
 Pastel gradients, purple/lavender/mint; blobs or floating organic filler; glowing orbs; gradient buttons/text; icon-in-colored-circle grids; centered-everything; uniform bubbly radius; colored card side-borders; "Welcome to / Unlock the power of" copy; lotus/mandala/chakra/Buddha/prayer imagery; emoji as design; stock smiling-yoga photos.
 

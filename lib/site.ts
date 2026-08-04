@@ -1,16 +1,20 @@
-// Single source of truth — contacts, offers, content
+// Single source of truth — contacts, offers, content.
+// Pages must not re-declare prices, links or copy that lives here.
 
 export const WHATSAPP = '66814734649'
+export const WHATSAPP_DISPLAY = '+66 81 473 4649'
 export const INSTAGRAM = 'https://www.instagram.com/dancesoultherapy'
 export const SITE_URL = 'https://dancesoultherapy.com'
 
 export const wa = (msg = "Hi DanceSoulTherapy, I'd like to book a session 🙏") =>
   `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`
 
+// Group and Private now live on one /experiences page; both labels are kept
+// so the header still reads as designed, with Private deep-linking to its band.
 export const nav = [
   { label: 'What is DST', href: '/what-is' },
-  { label: 'Sessions', href: '/group' },
-  { label: 'Private', href: '/private' },
+  { label: 'Sessions', href: '/experiences' },
+  { label: 'Private', href: '/experiences#private' },
   { label: 'Retreats', href: '/retreats' },
   { label: 'About', href: '/about' },
   { label: 'Journal', href: '/blog' },
@@ -21,67 +25,124 @@ export const nav = [
 // Until set, the booking page offers the WhatsApp flow.
 export const CAL_LINK = ''
 
-export const benefits: [string, string][] = [
-  ['Release', 'what the body holds.'],
-  ['Breathe', 'deeper, freer.'],
-  ['Return', 'from your head to your body.'],
-  ['Leave', 'lighter, clearer.'],
+// --- Prices — the only place a THB figure may be written ---
+export const prices = {
+  group: 'from 400 THB',
+  groupDropIn: '400 THB',
+  kids: '400 THB',
+  private: 'from 800 THB',
+  privateStudio: '800 THB · 60 min',
+  privateVilla: 'from 1,000 THB · 60–90 min',
+  outdoor: 'from 500 THB / person',
+  hotels: '2,500 – 3,500 THB',
+  retreats: 'from 6,000 THB',
+  retreatDay: '6,000 THB / person',
+  retreatMulti: 'from 12,000 THB / person',
+  corporate: 'on request',
+} as const
+
+// --- Locations ---
+export const locations = [
+  {
+    area: 'Lamai',
+    venue: 'Koh 33 Stadium',
+    note: 'evening sessions, see the weekly schedule.',
+    maps: 'https://www.google.com/maps/search/?api=1&query=Koh+33+Stadium+Lamai+Koh+Samui',
+  },
+  {
+    area: 'Chaweng',
+    venue: 'Chor Ratchawat Gym',
+    note: 'evening sessions, see the weekly schedule.',
+    maps: 'https://www.google.com/maps/search/?api=1&query=Chor+Ratchawat+Gym+Chaweng+Koh+Samui',
+  },
 ]
 
-export const pillars: [string, string][] = [
-  ['Movement', 'free, intuitive, no choreography.'],
-  ['Breath', 'the thread linking gesture to emotion.'],
-  ['Expression', 'the body says what words won’t.'],
-  ['Release', 'tension leaves, clarity returns.'],
+// --- Experiences index (home) ---
+export const experiences: {
+  no: string
+  name: string
+  desc: string
+  tag: string
+  href: string
+}[] = [
+  {
+    no: '01',
+    name: 'Group classes',
+    desc: 'Six evenings a week in Lamai and Chaweng. Ten people at most.',
+    tag: prices.group,
+    href: '/experiences',
+  },
+  {
+    no: '02',
+    name: 'Private sessions',
+    desc: 'In studio, at your villa, on the beach. One hour, entirely yours.',
+    tag: prices.private,
+    href: '/experiences#private',
+  },
+  {
+    no: '03',
+    name: 'Outdoor sessions',
+    desc: 'Movement facing the sea, in the last light of the day.',
+    tag: prices.outdoor,
+    href: '/booking',
+  },
+  {
+    no: '04',
+    name: 'Corporate',
+    desc: 'A physical reset for teams — on-site, beginner-safe.',
+    tag: prices.corporate,
+    href: '/corporate',
+  },
+  {
+    no: '05',
+    name: 'Retreats',
+    desc: 'Day immersions and three-day journeys between jungle and sea.',
+    tag: prices.retreats,
+    href: '/retreats',
+  },
 ]
 
-export type Offer = { t: string; d: string; p: string; id?: string }
-export const offers: Offer[] = [
-  {
-    t: 'Group classes',
-    d: 'In a group, all levels. Six sessions a week in Lamai and Chaweng, small groups (max 10).',
-    p: 'from 400 THB',
-  },
-  {
-    t: 'Kids classes',
-    d: 'Dance as a space of confidence and joy. Children learn to inhabit their own bodies.',
-    p: '400 THB',
-  },
-  {
-    t: 'Private sessions',
-    d: 'Tailored to you, in-studio or at home. Full attention, no eyes on you, at your own pace.',
-    p: 'from 800 THB',
-    id: 'private',
-  },
-  {
-    t: 'Outdoor sessions',
-    d: 'Movement meets the landscape. In a group, facing the sea, in the light of late afternoon.',
-    p: 'from 500 THB / person',
-  },
-  {
-    t: 'Hotels & Resorts',
-    d: 'A signature, turnkey experience hosted on-site for your wellness guests.',
-    p: '2,500 – 3,500 THB',
-  },
-  {
-    t: 'Retreats',
-    d: 'Immersive retreats built around movement and emotional release.',
-    p: '6,000 – 12,000 THB',
-  },
+// --- Private formats (was app/private/page.tsx) ---
+export const privateFormats: [string, string, string][] = [
+  [
+    'In studio',
+    'A dedicated space in Lamai or Chaweng, held entirely for you. The full arc, paced to your body.',
+    prices.privateStudio,
+  ],
+  [
+    'At your villa or outdoors',
+    'Hannah comes to you — your terrace, your garden, the beach at golden hour. Complete privacy.',
+    prices.privateVilla,
+  ],
+]
+
+// --- Booking ---
+export const bookingSteps: [string, string][] = [
+  ['1 · Choose', 'Group, private, outdoor — or ask, and we’ll guide you.'],
+  ['2 · Confirm', 'Pick a time on WhatsApp. You’ll get a confirmation right away.'],
+  ['3 · Come as you are', 'Comfortable clothes, water, nothing else. Pay on-site or online.'],
+]
+
+export const bookingOptions: [string, string][] = [
+  ['Group class', "Hi! I'd like to reserve a spot in a group class 🙏"],
+  ['Private session', "Hi Hannah, I'd like to book a private session 🙏"],
+  ['Outdoor / sunset session', "Hi! I'd like to join an outdoor session 🙏"],
+  ['Retreat waitlist', "Hi! I'd like to join the retreat waitlist 🙏"],
 ]
 
 export const testimonials: [string, string][] = [
   [
     'I came in sceptical and left in tears — the good kind. A relief I hadn’t felt in months.',
-    'Camille, expat',
+    'Camille — expat, Lamai',
   ],
   [
-    'Nothing like a dance class. I released tension I didn’t even know I was carrying.',
-    'Marc, resident',
+    'Nothing like a dance class. I released tension I didn’t know I was carrying.',
+    'Marc — resident',
   ],
-  ['Our guests still talk about it. A truly unique experience.', 'Manager, Chaweng resort'],
+  ['Our guests still talk about it.', 'Resort manager — Chaweng'],
 ]
 
+// All nine — the last four used to live only on the (now removed) /faq route.
 export const faqs: [string, string][] = [
   [
     'I can’t dance. Is that a problem?',
@@ -97,6 +158,22 @@ export const faqs: [string, string][] = [
   ],
   ['Are men welcome?', 'Absolutely. All bodies, all genders, all ages.'],
   ['How do I book?', 'Online via WhatsApp, in seconds. Pay on-site or online.'],
+  [
+    'What should I wear or bring?',
+    'Comfortable clothes you can move in, and water. Everything else is provided. Barefoot or socks — your choice.',
+  ],
+  [
+    'What if I get emotional during a session?',
+    'That’s welcome, and more common than you’d think. The space is held for exactly that — no one will intervene, interpret or stare. You can pause any time.',
+  ],
+  [
+    'Is it suitable during pregnancy or with an injury?',
+    'Often yes, gently adapted — message us first and tell us where you’re at, so the session can be shaped around you.',
+  ],
+  [
+    'Do you speak English and French?',
+    'Yes — sessions are held in English, and French is spoken fluently.',
+  ],
 ]
 
 export const schedule: [string, string, string][] = [

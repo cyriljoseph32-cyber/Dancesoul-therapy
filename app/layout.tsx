@@ -52,7 +52,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="theme-color" content="#10362B" />
+        {/* matches --night, the actual body background */}
+        <meta name="theme-color" content="#0C1B2A" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -73,7 +74,13 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
-        <a href={wa()} className="fab" target="_blank" rel="noreferrer">
+        <a
+          href={wa()}
+          className="fab"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Book a session on WhatsApp"
+        >
           Book
         </a>
       </body>

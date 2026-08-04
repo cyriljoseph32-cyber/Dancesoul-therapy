@@ -1,25 +1,12 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { wa, CAL_LINK } from '@/lib/site'
+import { wa, CAL_LINK, bookingSteps, bookingOptions } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: 'Book Your Session',
   description:
     'Book a DanceSoulTherapy session in seconds — group classes, private sessions, outdoor and retreats. Pay on-site or online.',
 }
-
-const steps: [string, string][] = [
-  ['1 · Choose', 'Group, private, outdoor — or ask, and we’ll guide you.'],
-  ['2 · Confirm', 'Pick a time on WhatsApp. You’ll get a confirmation right away.'],
-  ['3 · Come as you are', 'Comfortable clothes, water, nothing else. Pay on-site or online.'],
-]
-
-const quick: [string, string][] = [
-  ['Group class', "Hi! I'd like to reserve a spot in a group class 🙏"],
-  ['Private session', "Hi Hannah, I'd like to book a private session 🙏"],
-  ['Outdoor / sunset session', "Hi! I'd like to join an outdoor session 🙏"],
-  ['Retreat waitlist', "Hi! I'd like to join the retreat waitlist 🙏"],
-]
 
 export default function Booking() {
   return (
@@ -29,9 +16,9 @@ export default function Booking() {
         <p>Three steps, no forms, no friction.</p>
       </section>
 
-      <section className="concept">
+      <section className="concept tight" data-reveal>
         <div className="pillars three">
-          {steps.map(([t, d]) => (
+          {bookingSteps.map(([t, d]) => (
             <div key={t} className="pillar">
               <h3>{t}</h3>
               <p>{d}</p>
@@ -42,7 +29,7 @@ export default function Booking() {
 
       {CAL_LINK ? (
         <section className="offers">
-          <div className="section-head center">
+          <div className="section-head">
             <p className="eyebrow">Online calendar</p>
             <h2>Pick your time.</h2>
           </div>
@@ -52,29 +39,29 @@ export default function Booking() {
             style={{
               width: '100%',
               minHeight: 620,
-              border: '1px solid var(--line)',
-              borderRadius: 18,
+              border: '1px solid var(--hairline)',
+              borderRadius: 2,
             }}
           />
         </section>
       ) : (
-        <section className="offers">
+        <section className="offers" data-reveal>
           <div className="section-head">
             <p className="eyebrow">One tap</p>
             <h2>Choose your experience.</h2>
           </div>
-          <div className="offer-grid two">
-            {quick.map(([t, msg]) => (
+          {/* Rows, not cards — a booking link must not wear the price token. */}
+          <div className="tap-list">
+            {bookingOptions.map(([t, msg]) => (
               <a
                 key={t}
                 href={wa(msg)}
                 target="_blank"
                 rel="noreferrer"
-                className="offer link"
+                className="tap-row"
               >
-                <h3>{t}</h3>
-                <p>Opens WhatsApp with your request pre-written — just send.</p>
-                <span className="price">Book →</span>
+                <span className="label">{t}</span>
+                <span className="go">Open WhatsApp →</span>
               </a>
             ))}
           </div>
@@ -88,7 +75,7 @@ export default function Booking() {
       <section className="final-cta">
         <h2>See you in the room.</h2>
         <p>Lamai or Chaweng — six evenings a week.</p>
-        <Link href="/group" className="btn btn-light">
+        <Link href="/experiences" className="btn btn-ghost">
           See the schedule
         </Link>
       </section>
