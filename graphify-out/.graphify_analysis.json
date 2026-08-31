@@ -1,0 +1,325 @@
+{
+  "communities": {
+    "0": [
+      "app_about_page",
+      "app_about_page_about",
+      "app_about_page_metadata",
+      "app_about_page_principles",
+      "app_corporate_page",
+      "app_corporate_page_corporate",
+      "app_corporate_page_formats",
+      "app_corporate_page_metadata",
+      "app_page_home",
+      "app_retreats_page",
+      "app_retreats_page_arc",
+      "app_retreats_page_metadata",
+      "app_retreats_page_options",
+      "app_retreats_page_retreats",
+      "app_testimonials_page",
+      "app_testimonials_page_metadata",
+      "app_testimonials_page_more",
+      "app_testimonials_page_rationale_10",
+      "app_testimonials_page_testimonials",
+      "app_what_is_page",
+      "app_what_is_page_arc",
+      "app_what_is_page_metadata",
+      "app_what_is_page_whatis",
+      "lib_site_wa"
+    ],
+    "1": [
+      "app_booking_page",
+      "app_booking_page_booking",
+      "app_booking_page_metadata",
+      "app_experiences_page",
+      "app_experiences_page_experiences",
+      "app_experiences_page_metadata",
+      "app_page",
+      "lib_site",
+      "lib_site_bookingoptions",
+      "lib_site_bookingsteps",
+      "lib_site_cal_link",
+      "lib_site_experiences",
+      "lib_site_held",
+      "lib_site_locations",
+      "lib_site_outcomes",
+      "lib_site_pillarshome",
+      "lib_site_prices",
+      "lib_site_privateformats",
+      "lib_site_processsteps",
+      "lib_site_schedule",
+      "lib_site_testimonials"
+    ],
+    "2": [
+      "ref_dom",
+      "ref_dom_iterable",
+      "ref_esnext",
+      "tsconfig_compileroptions",
+      "tsconfig_compileroptions_allowjs",
+      "tsconfig_compileroptions_esmoduleinterop",
+      "tsconfig_compileroptions_incremental",
+      "tsconfig_compileroptions_isolatedmodules",
+      "tsconfig_compileroptions_jsx",
+      "tsconfig_compileroptions_lib",
+      "tsconfig_compileroptions_module",
+      "tsconfig_compileroptions_moduleresolution",
+      "tsconfig_compileroptions_noemit",
+      "tsconfig_compileroptions_paths",
+      "tsconfig_compileroptions_plugins",
+      "tsconfig_compileroptions_resolvejsonmodule",
+      "tsconfig_compileroptions_skiplibcheck",
+      "tsconfig_compileroptions_strict",
+      "tsconfig_compileroptions_target"
+    ],
+    "3": [
+      "app_blog_page",
+      "app_blog_page_blog",
+      "app_blog_page_metadata",
+      "app_blog_slug_page",
+      "app_blog_slug_page_generatemetadata",
+      "app_blog_slug_page_generatestaticparams",
+      "app_blog_slug_page_postpage",
+      "app_robots",
+      "app_robots_robots",
+      "app_sitemap",
+      "app_sitemap_sitemap",
+      "lib_posts",
+      "lib_posts_getpost",
+      "lib_posts_post",
+      "lib_posts_posts",
+      "lib_site_site_url"
+    ],
+    "4": [
+      "app_layout",
+      "app_layout_metadata",
+      "app_layout_orgschema",
+      "app_layout_rootlayout",
+      "components_footer",
+      "components_footer_explore",
+      "components_footer_footer",
+      "components_header",
+      "components_header_header",
+      "components_revealinit",
+      "components_revealinit_revealinit",
+      "components_risemark",
+      "components_risemark_risemark",
+      "components_risemark_wordmark",
+      "lib_site_nav",
+      "lib_site_whatsapp"
+    ],
+    "5": [
+      "next",
+      "package",
+      "package_dependencies",
+      "package_dependencies_next",
+      "package_dependencies_react",
+      "package_dependencies_react_dom",
+      "package_name",
+      "package_private",
+      "package_scripts",
+      "package_scripts_build",
+      "package_scripts_dev",
+      "package_scripts_lint",
+      "package_scripts_start",
+      "package_version",
+      "react",
+      "react_dom"
+    ],
+    "6": [
+      "app_contact_page",
+      "app_contact_page_channels",
+      "app_contact_page_contact",
+      "app_contact_page_metadata",
+      "app_gallery_page",
+      "app_gallery_page_gallery",
+      "app_gallery_page_metadata",
+      "app_gallery_page_rationale_9",
+      "app_gallery_page_tiles",
+      "lib_site_faqs",
+      "lib_site_instagram",
+      "lib_site_whatsapp_display"
+    ],
+    "7": [
+      "package_devdependencies",
+      "package_devdependencies_types_node",
+      "package_devdependencies_types_react",
+      "package_devdependencies_types_react_dom",
+      "package_devdependencies_typescript",
+      "types_node",
+      "types_react",
+      "types_react_dom",
+      "typescript"
+    ],
+    "8": [
+      "ref_next_env_d_ts",
+      "ref_next_types_ts",
+      "ref_node_modules",
+      "ref_ts",
+      "ref_tsx",
+      "tsconfig",
+      "tsconfig_exclude",
+      "tsconfig_include"
+    ],
+    "9": [
+      "next_config",
+      "next_config_nextconfig"
+    ]
+  },
+  "cohesion": {
+    "0": 0.10144927536231885,
+    "1": 0.15714285714285714,
+    "2": 0.10526315789473684,
+    "3": 0.18333333333333332,
+    "4": 0.19166666666666668,
+    "5": 0.125,
+    "6": 0.16666666666666666,
+    "7": 0.2222222222222222,
+    "8": 0.25,
+    "9": 1.0
+  },
+  "gods": [
+    {
+      "id": "lib_site_wa",
+      "label": "wa()",
+      "degree": 27
+    },
+    {
+      "id": "tsconfig_compileroptions",
+      "label": "compilerOptions",
+      "degree": 16
+    },
+    {
+      "id": "lib_site_site_url",
+      "label": "SITE_URL",
+      "degree": 5
+    },
+    {
+      "id": "package_scripts",
+      "label": "scripts",
+      "degree": 5
+    },
+    {
+      "id": "lib_site_instagram",
+      "label": "INSTAGRAM",
+      "degree": 5
+    },
+    {
+      "id": "tsconfig_include",
+      "label": "include",
+      "degree": 5
+    },
+    {
+      "id": "lib_posts_getpost",
+      "label": "getPost()",
+      "degree": 4
+    },
+    {
+      "id": "tsconfig_compileroptions_lib",
+      "label": "lib",
+      "degree": 4
+    },
+    {
+      "id": "lib_posts_posts",
+      "label": "posts",
+      "degree": 4
+    },
+    {
+      "id": "app_blog_slug_page_postpage",
+      "label": "PostPage()",
+      "degree": 3
+    }
+  ],
+  "surprises": [
+    {
+      "source": "Booking()",
+      "target": "wa()",
+      "source_files": [
+        "app/booking/page.tsx",
+        "lib/site.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; bridges separate communities; peripheral node `Booking()` unexpectedly reaches hub `wa()`"
+    },
+    {
+      "source": "Contact()",
+      "target": "wa()",
+      "source_files": [
+        "app/contact/page.tsx",
+        "lib/site.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; bridges separate communities; peripheral node `Contact()` unexpectedly reaches hub `wa()`"
+    },
+    {
+      "source": "Experiences()",
+      "target": "wa()",
+      "source_files": [
+        "app/experiences/page.tsx",
+        "lib/site.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; bridges separate communities; peripheral node `Experiences()` unexpectedly reaches hub `wa()`"
+    },
+    {
+      "source": "Gallery()",
+      "target": "wa()",
+      "source_files": [
+        "app/gallery/page.tsx",
+        "lib/site.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; bridges separate communities; peripheral node `Gallery()` unexpectedly reaches hub `wa()`"
+    },
+    {
+      "source": "RootLayout()",
+      "target": "wa()",
+      "source_files": [
+        "app/layout.tsx",
+        "lib/site.ts"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; bridges separate communities; peripheral node `RootLayout()` unexpectedly reaches hub `wa()`"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `wa()` connect `Community 0` to `Community 1`, `Community 3`, `Community 4`, `Community 6`?",
+      "why": "High betweenness centrality (0.132) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `compilerOptions` connect `Community 2` to `Community 8`?",
+      "why": "High betweenness centrality (0.029) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `devDependencies` connect `Community 7` to `Community 5`?",
+      "why": "High betweenness centrality (0.015) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `Post`, `metadata`, `principles` to the rest of the system?",
+      "why": "59 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 0` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.10144927536231885 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 2` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.10526315789473684 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 5` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.125 - nodes in this community are weakly interconnected."
+    }
+  ]
+}
